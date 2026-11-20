@@ -1,0 +1,158 @@
+# ─────────────────────────────────────────────────────────────────
+# SECTION 0: Block Sensitive Files & Hidden Files (Security Hardening)
+# Prevents access to .env, .git, .sqlite, .sql, .log, composer.lock, etc.
+# ─────────────────────────────────────────────────────────────────
+<FilesMatch "(^\.env|^\.git|.*\.env.*|.*\.sqlite.*|.*\.sql$|.*\.log$|composer\.(json|lock)|package\.(json|lock))">
+    Require all denied
+</FilesMatch>
+
+# ─────────────────────────────────────────────────────────────────
+# SECTION 1: Gzip / Deflate Compression
+# Compresses HTML, CSS, JS, XML, JSON, fonts before sending to browser.
+# Typically reduces transfer size by 60-80%.
+# ─────────────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/atom+xml
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE font/truetype
+    AddOutputFilterByType DEFLATE font/opentype
+    AddOutputFilterByType DEFLATE font/woff
+    AddOutputFilterByType DEFLATE font/woff2
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE image/x-icon
+
+    # Remove browser bugs (only needed for ancient browsers)
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    Header append Vary User-Agent
+</IfModule>
+
+# ─────────────────────────────────────────────────────────────────
+# SECTION 2: Browser Caching (Expires Headers)
+# Tells browsers how long to cache static assets locally.
+# Static assets (images, fonts, CSS, JS) → 1 year
+# HTML documents → 1 hour (so updates propagate quickly)
+# ─────────────────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Default: 1 hour for anything not explicitly set
+    ExpiresDefault                                "access plus 1 hour"
+
+    # HTML documents — short cache so updates are seen quickly
+    ExpiresByType text/html                       "access plus 1 hour"
+
+    # CSS & JavaScript — 1 year (use versioned filenames for cache busting)
+    ExpiresByType text/css                        "access plus 1 year"
+    ExpiresByType application/javascript          "access plus 1 year"
+    ExpiresByType text/javascript                 "access plus 1 year"
+
+    # Images — 1 year
+    ExpiresByType image/jpeg                      "access plus 1 year"
+    ExpiresByType image/jpg                       "access plus 1 year"
+    ExpiresByType image/png                       "access plus 1 year"
+    ExpiresByType image/gif                       "access plus 1 year"
+    ExpiresByType image/svg+xml                   "access plus 1 year"
+    ExpiresByType image/webp                      "access plus 1 year"
+    ExpiresByType image/avif                      "access plus 1 year"
+    ExpiresByType image/x-icon                    "access plus 1 year"
+    ExpiresByType image/vnd.microsoft.icon        "access plus 1 year"
+
+    # Fonts — 1 year
+    ExpiresByType font/woff                       "access plus 1 year"
+    ExpiresByType font/woff2                      "access plus 1 year"
+    ExpiresByType font/truetype                   "access plus 1 year"
+    ExpiresByType font/opentype                   "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject   "access plus 1 year"
+    ExpiresByType application/font-woff           "access plus 1 year"
+    ExpiresByType application/font-woff2          "access plus 1 year"
+
+    # Data formats
+    ExpiresByType application/json                "access plus 0 seconds"
+    ExpiresByType application/xml                 "access plus 0 seconds"
+    ExpiresByType text/xml                        "access plus 0 seconds"
+</IfModule>
+
+# ─────────────────────────────────────────────────────────────────
+# SECTION 3: Cache-Control Headers
+# Adds explicit Cache-Control headers as a fallback where
+# mod_expires is not available, and for finer control.
+# ─────────────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+    # Static assets: 1 year, immutable (safe because Vite adds content hashes)
+    <FilesMatch "\.(css|js|woff|woff2|ttf|otf|eot|svg|webp|avif|png|jpg|jpeg|gif|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # HTML: revalidate on every request
+    <FilesMatch "\.html$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+
+    # Enable Keep-Alive connections (reduces TCP overhead)
+    Header set Connection keep-alive
+
+    # Security headers (no UI impact, improves Best Practices score)
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ─────────────────────────────────────────────────────────────────
+# SECTION 4: ETags — let browser validate cache with server
+# ─────────────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# ─────────────────────────────────────────────────────────────────
+# SECTION 5: Laravel Routing (original rules — untouched)
+# ─────────────────────────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Block access to sensitive files and hidden paths
+    RewriteRule ^(\.env|\.git|storage/logs/|.*\.sql|.*\.sqlite) - [F,L,NC]
+
+    # Redirect HTTP to HTTPS (301 Permanent Redirect)
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirect WWW to Non-WWW (301 Permanent Redirect to canonical domain)
+    RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Handle X-XSRF-Token Header
+    RewriteCond %{HTTP:x-xsrf-token} .
+    RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

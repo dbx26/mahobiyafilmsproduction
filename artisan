@@ -1,0 +1,5 @@
+#!/usr/bin/env php
+<?php
+
+chdir(__DIR__ . '/core');
+require __DIR__ . '/core/artisan';
