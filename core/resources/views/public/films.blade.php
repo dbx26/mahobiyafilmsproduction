@@ -1,91 +1,123 @@
-@extends('public.layouts.app')
+﻿@extends('public.layouts.app')
 
-@section('title', 'Films & Projects - Mahobiya Films Production')
+@section('title', 'Works - Moovi')
 
 @section('content')
-<div class="py-5 text-center" style="background: linear-gradient(180deg, #16181f 0%, #0b0c10 100%); border-bottom: 1px solid rgba(229, 169, 59, 0.2);">
-    <div class="container py-4">
-        <h1 class="display-4 fw-bold text-white brand-font mb-2">FILMS &amp; PRODUCTIONS</h1>
-        <p class="text-gold text-uppercase fw-semibold" style="letter-spacing: 2px;">Feature Films • Trailers • Regional Cinema • OTT Series</p>
-    </div>
-</div>
-
-<div class="container py-5">
-    <!-- Film Cards Grid -->
-    <div class="row g-4">
-        <!-- Film 1: Mahakavya Shri Ramayan Katha Shri Ram Ki -->
-        <div class="col-md-6 col-lg-4">
-            <div class="film-card h-100 d-flex flex-column">
-                <div class="position-relative">
-                    <img src="{{ asset('images/logo.png') }}" class="w-100" style="height: 280px; object-fit: contain; background: #000; padding: 20px;" alt="Mahakavya Shri Ramayan">
-                    <span class="badge bg-gold text-dark position-absolute top-0 end-0 m-3 fw-bold">CBFC Certified</span>
-                </div>
-                <div class="p-4 d-flex flex-column flex-grow-1">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <small class="text-gold fw-semibold">Hindi • Motion Picture</small>
-                        <small class="text-white-50">2026</small>
-                    </div>
-                    <h4 class="fw-bold text-white mb-2">Mahakavya Shri Ramayan</h4>
-                    <p class="text-white-50 small mb-4 flex-grow-1">
-                        Katha Shri Ram Ki — A grand cinematic mythological presentation tracing the divine life, ideals, and valor of Shri Ram with classical orchestration and cutting-edge visual effects.
-                    </p>
-                    <a href="{{ route('film.detail', 'mahakavya-shri-ramayan') }}" class="btn btn-outline-gold w-100">
-                        View Film Details &amp; Cast
-                    </a>
+        <!-- Page Title -->
+        <div class="page-title-area">
+            <div class="container">
+                <div class="page-title-item">
+                    <h2>Work</h2>
+                    <ul>
+                        <li>
+                            <a href="{{ route('home') }}">Home</a>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>Work</li>
+                    </ul>
                 </div>
             </div>
         </div>
+        <!-- End Page Title -->
 
-        <!-- Film 2: Katha Shri Ram Ki (Official Trailers) -->
-        <div class="col-md-6 col-lg-4">
-            <div class="film-card h-100 d-flex flex-column">
-                <div class="position-relative">
-                    <div class="d-flex align-items-center justify-content-center bg-dark" style="height: 280px; border-bottom: 1px solid var(--cinema-border);">
-                        <i class="bi bi-play-circle text-gold display-3"></i>
+        <!-- Work -->
+        <section class="work-area work-area-three pt-100 pb-70">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="{{ route('film.detail', 'work-details') }}">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work1.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>My Dream Stranger</h3>
+                                    <span>Music ViDEO</span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <span class="badge bg-primary position-absolute top-0 end-0 m-3">Trailer</span>
-                </div>
-                <div class="p-4 d-flex flex-column flex-grow-1">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <small class="text-gold fw-semibold">Hindi • Official Promo</small>
-                        <small class="text-white-50">2026</small>
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="{{ route('film.detail', 'work-details') }}">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work2.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>Back To You</h3>
+                                    <span>Advertising Music Video</span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <h4 class="fw-bold text-white mb-2">Official Trailers &amp; Promos</h4>
-                    <p class="text-white-50 small mb-4 flex-grow-1">
-                        Official trailer showcase certified by the Central Board of Film Certification (CBFC) in September 2026 for theatrical and digital broadcast.
-                    </p>
-                    <a href="{{ route('videos') }}" class="btn btn-outline-gold w-100">
-                        Watch Official Teaser
-                    </a>
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="{{ route('film.detail', 'work-details') }}">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work3.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>We Make it awesome</h3>
+                                    <span>Commercial Music Video</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="{{ route('film.detail', 'work-details') }}">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work4.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>My Dream Girl</h3>
+                                    <span>Commercial Music Video</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="{{ route('film.detail', 'work-details') }}">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work5.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>Love Me Like You</h3>
+                                    <span>Romantic Music ViDEO</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="{{ route('film.detail', 'work-details') }}">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work6.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>Shape Of You</h3>
+                                    <span>Advertising Music Video</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="{{ route('film.detail', 'work-details') }}">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work7.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>Imagine Dragons - Believer</h3>
+                                    <span>Commercial Music Video</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="{{ route('film.detail', 'work-details') }}">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work8.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>In The End</h3>
+                                    <span>Commercial Music Video</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- End Work -->
 
-        <!-- Film 3: Upcoming Regional Production -->
-        <div class="col-md-6 col-lg-4">
-            <div class="film-card h-100 d-flex flex-column">
-                <div class="position-relative">
-                    <div class="d-flex align-items-center justify-content-center bg-dark" style="height: 280px; border-bottom: 1px solid var(--cinema-border);">
-                        <i class="bi bi-camera-reels text-gold display-3"></i>
-                    </div>
-                    <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 fw-bold">In Production</span>
-                </div>
-                <div class="p-4 d-flex flex-column flex-grow-1">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <small class="text-gold fw-semibold">Regional • Central India</small>
-                        <small class="text-white-50">Upcoming</small>
-                    </div>
-                    <h4 class="fw-bold text-white mb-2">Regional Cinema Slate</h4>
-                    <p class="text-white-50 small mb-4 flex-grow-1">
-                        Upcoming cinematic and OTT series highlighting real-life inspirational narratives, folklore, and drama rooted in Chhattisgarh and Central India.
-                    </p>
-                    <a href="{{ route('contact') }}" class="btn btn-outline-gold w-100">
-                        Inquire / Casting
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        <!-- Footer -->
 @endsection
-

@@ -1,124 +1,141 @@
-@extends('public.layouts.app')
+﻿@extends('public.layouts.app')
 
-@section('title', 'Contact Us - Mahobiya Films Production Private Limited')
+@section('title', 'Contact Us - Moovi')
 
 @section('content')
-<div class="py-5 text-center" style="background: linear-gradient(180deg, #16181f 0%, #0b0c10 100%); border-bottom: 1px solid rgba(229, 169, 59, 0.2);">
-    <div class="container py-4">
-        <h1 class="display-4 fw-bold text-white brand-font mb-2">CONTACT US</h1>
-        <p class="text-gold text-uppercase fw-semibold" style="letter-spacing: 2px;">Inquiries • Film Distribution • Casting • Production Collaborations</p>
-    </div>
-</div>
-
-<div class="container py-5">
-    @if(session('success'))
-        <div class="alert alert-success d-flex align-items-center mb-4" role="alert">
-            <i class="bi bi-check-circle-fill me-2 fs-5"></i>
-            <div>{{ session('success') }}</div>
-        </div>
-    @endif
-
-    <div class="row g-5">
-        <!-- Contact Information -->
-        <div class="col-lg-5">
-            <h3 class="fw-bold text-white mb-4 brand-font">Get In Touch</h3>
-            <p class="text-white-50 mb-4">
-                Whether you have questions regarding our upcoming theatrical releases, OTT collaborations, casting opportunities, or media coverage, our production desk is here to assist you.
-            </p>
-
-            <div class="d-flex align-items-start gap-3 mb-4">
-                <div class="bg-dark p-3 rounded-circle border border-warning text-gold">
-                    <i class="bi bi-geo-alt fs-4"></i>
-                </div>
-                <div>
-                    <h6 class="fw-bold text-white mb-1">Registered Office</h6>
-                    <p class="text-white-50 small mb-0">
-                        Koushal Tower, Kohka Khurd Main Road (Kurud Road), Kohka, Bhilai, Durg, Chhattisgarh - 490023
-                    </p>
-                </div>
-            </div>
-
-            <div class="d-flex align-items-start gap-3 mb-4">
-                <div class="bg-dark p-3 rounded-circle border border-warning text-gold">
-                    <i class="bi bi-telephone fs-4"></i>
-                </div>
-                <div>
-                    <h6 class="fw-bold text-white mb-1">Phone / WhatsApp</h6>
-                    <p class="text-white-50 small mb-0">+91 91091 41966</p>
-                    <p class="text-white-50 small mb-0">+91 89660 02047</p>
-                </div>
-            </div>
-
-            <div class="d-flex align-items-start gap-3 mb-4">
-                <div class="bg-dark p-3 rounded-circle border border-warning text-gold">
-                    <i class="bi bi-envelope fs-4"></i>
-                </div>
-                <div>
-                    <h6 class="fw-bold text-white mb-1">Email Address</h6>
-                    <p class="text-white-50 small mb-0">mahobiyafilmsproduction@gmail.com</p>
-                </div>
-            </div>
-
-            <div class="d-flex align-items-start gap-3">
-                <div class="bg-dark p-3 rounded-circle border border-warning text-gold">
-                    <i class="bi bi-info-circle fs-4"></i>
-                </div>
-                <div>
-                    <h6 class="fw-bold text-white mb-1">Corporate Registration</h6>
-                    <p class="text-white-50 small mb-0">CIN: U59111CT2023PTC015188</p>
-                    <p class="text-white-50 small mb-0">RoC Chhattisgarh • Active</p>
+        <!-- Page Title -->
+        <div class="page-title-area">
+            <div class="container">
+                <div class="page-title-item">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li>
+                            <a href="{{ route('home') }}">Home</a>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>Contact</li>
+                    </ul>
                 </div>
             </div>
         </div>
+        <!-- End Page Title -->
 
-        <!-- Contact Message Form -->
-        <div class="col-lg-7">
-            <div class="film-card p-4 p-md-5">
-                <h4 class="fw-bold text-white mb-3 brand-font">Send Us a Message</h4>
-                <p class="text-white-50 small mb-4">Please fill out the form below and our team will get back to you promptly.</p>
+        <!-- Contact -->
+        <div class="contact-area pt-100 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="contact-item">
+                            <h2>Get In Touch</h2>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Name">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Email">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
 
-                <form action="{{ route('contact.submit') }}" method="POST">
-                    @csrf
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label class="form-label text-white-50 small">Your Full Name <span class="text-gold">*</span></label>
-                            <input type="text" class="form-control bg-dark text-white border-secondary" name="name" required placeholder="John Doe">
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label text-white-50 small">Your Email Address <span class="text-gold">*</span></label>
-                            <input type="email" class="form-control bg-dark text-white border-secondary" name="email" required placeholder="name@example.com">
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Phone">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-sm-6 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Subject">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Message"></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-md-12 col-lg-12">
+                                        <button type="submit" class="contact-btn btn">
+                                            Send Message
+                                        </button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
+                    <div class="col-lg-5">
+                        <div class="contact-item">
+                            <h2>Know More</h2>
 
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label class="form-label text-white-50 small">Mobile / Phone Number</label>
-                            <input type="tel" class="form-control bg-dark text-white border-secondary" name="phone" placeholder="+91 98765 43210">
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label text-white-50 small">Inquiry Subject</label>
-                            <select class="form-select bg-dark text-white border-secondary" name="subject">
-                                <option value="General Inquiry">General Inquiry</option>
-                                <option value="Film Distribution / Theatrical">Film Distribution / Theatrical</option>
-                                <option value="OTT Rights / Streaming">OTT Rights / Streaming</option>
-                                <option value="Casting / Audition">Casting / Audition</option>
-                                <option value="Media & Press">Media &amp; Press</option>
-                            </select>
+                            <div class="contact-address">
+                                <div class="contact-inner">
+                                    <i class='bx bx-current-location icon'></i>
+                                    <h4>Address:</h4>
+                                    <span>3254-425 NW-2nd Ave, Miami USA</span>
+                                </div>
+                                <div class="contact-inner">
+                                    <i class='bx bx-phone-call icon'></i>
+                                    <h4>Phone:</h4>
+                                    <a href="tel:882569756">882-569-756</a>
+                                </div>
+                                <div class="contact-inner">
+                                    <i class='bx bx-mail-send icon'></i>
+                                    <h4>Email:</h4>
+                                    <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#0f666169604f6260607966216c6062"><span class="__cf_email__" data-cfemail="1b72757d745b7674746d7235787476">[email&#160;protected]</span></a>
+                                </div>
+                                <div class="contact-inner">
+                                    <i class='bx bx-support icon'></i>
+                                    <h4>Support:</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <i class='bx bxl-facebook'></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <i class='bx bxl-twitter'></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <i class='bx bxl-instagram'></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" target="_blank">
+                                                <i class='bx bxl-pinterest-alt'></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="mb-4">
-                        <label class="form-label text-white-50 small">Message / Inquiry Details <span class="text-gold">*</span></label>
-                        <textarea class="form-control bg-dark text-white border-secondary" rows="5" name="message" required placeholder="Write your message here..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-gold btn-lg w-100">
-                        <i class="bi bi-send me-1"></i> Send Inquiry
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+        <!-- End  Contact -->
+
+        <!-- Map -->
+        <div class="map-area">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60713147.49322739!2d62.88250195139032!3d21.755615757913848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3663f18a24cbe857%3A0xa9416bfcd3a0f459!2sAsia!5e0!3m2!1sen!2sbd!4v1594194977692!5m2!1sen!2sbd"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <!-- End Map -->
+
+        <!-- Footer -->
 @endsection
-

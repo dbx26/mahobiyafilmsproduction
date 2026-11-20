@@ -1,93 +1,79 @@
-@extends('public.layouts.app')
+﻿@extends('public.layouts.app')
 
-@section('title', 'Photo & Event Gallery - Mahobiya Films Production')
+@section('title', 'Gallery & Features - Moovi')
 
 @section('content')
-<div class="py-5 text-center" style="background: linear-gradient(180deg, #16181f 0%, #0b0c10 100%); border-bottom: 1px solid rgba(229, 169, 59, 0.2);">
-    <div class="container py-4">
-        <h1 class="display-4 fw-bold text-white brand-font mb-2">PHOTO &amp; EVENT GALLERY</h1>
-        <p class="text-gold text-uppercase fw-semibold" style="letter-spacing: 2px;">Behind The Scenes • Production Shoots • Launch Ceremonies</p>
-    </div>
-</div>
-
-<div class="container py-5">
-    <div class="row g-4">
-        <!-- Gallery Item 1 -->
-        <div class="col-sm-6 col-lg-4">
-            <div class="film-card overflow-hidden">
-                <img src="{{ asset('images/logo.png') }}" class="w-100" style="height: 240px; object-fit: contain; background: #000; padding: 20px;" alt="Logo Presentation">
-                <div class="p-3">
-                    <span class="badge bg-gold text-dark mb-1">Corporate Branding</span>
-                    <h6 class="fw-bold text-white mb-0">Official Logo &amp; Identity Reveal</h6>
+        <!-- Page Title -->
+        <div class="page-title-area">
+            <div class="container">
+                <div class="page-title-item">
+                    <h2>Feature</h2>
+                    <ul>
+                        <li>
+                            <a href="{{ route('home') }}">Home</a>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>Feature</li>
+                    </ul>
                 </div>
             </div>
         </div>
+        <!-- End Page Title -->
 
-        <!-- Gallery Item 2 -->
-        <div class="col-sm-6 col-lg-4">
-            <div class="film-card overflow-hidden">
-                <div class="d-flex align-items-center justify-content-center bg-dark" style="height: 240px; border-bottom: 1px solid var(--cinema-border);">
-                    <i class="bi bi-camera text-gold display-4"></i>
-                </div>
-                <div class="p-3">
-                    <span class="badge bg-primary mb-1">Shooting Stills</span>
-                    <h6 class="fw-bold text-white mb-0">Mahakavya Shri Ramayan Set Production</h6>
+        <!-- Work -->
+        <section class="work-area work-area-three pt-100 pb-70">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="work-details.html">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work5.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>Love Me Like You</h3>
+                                    <span>Romantic Music ViDEO</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="work-details.html">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work6.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>Shape Of You</h3>
+                                    <span>Advertising Music Video</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="work-details.html">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work7.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>Imagine Dragons - Believer</h3>
+                                    <span>Commercial Music Video</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                        <a href="work-details.html">
+                            <div class="work-item">
+                                <img src="{{ asset('assets/') }}/img/home-one/work8.jpg" alt="Work">
+                                <div class="work-content">
+                                    <h3>In The End</h3>
+                                    <span>Commercial Music Video</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- End Work -->
 
-        <!-- Gallery Item 3 -->
-        <div class="col-sm-6 col-lg-4">
-            <div class="film-card overflow-hidden">
-                <div class="d-flex align-items-center justify-content-center bg-dark" style="height: 240px; border-bottom: 1px solid var(--cinema-border);">
-                    <i class="bi bi-megaphone text-gold display-4"></i>
-                </div>
-                <div class="p-3">
-                    <span class="badge bg-success mb-1">Media Events</span>
-                    <h6 class="fw-bold text-white mb-0">Teaser Announcement &amp; Press Meet</h6>
-                </div>
-            </div>
-        </div>
-
-        <!-- Gallery Item 4 -->
-        <div class="col-sm-6 col-lg-4">
-            <div class="film-card overflow-hidden">
-                <div class="d-flex align-items-center justify-content-center bg-dark" style="height: 240px; border-bottom: 1px solid var(--cinema-border);">
-                    <i class="bi bi-award text-gold display-4"></i>
-                </div>
-                <div class="p-3">
-                    <span class="badge bg-warning text-dark mb-1">Certification</span>
-                    <h6 class="fw-bold text-white mb-0">CBFC Certification Milestone</h6>
-                </div>
-            </div>
-        </div>
-
-        <!-- Gallery Item 5 -->
-        <div class="col-sm-6 col-lg-4">
-            <div class="film-card overflow-hidden">
-                <div class="d-flex align-items-center justify-content-center bg-dark" style="height: 240px; border-bottom: 1px solid var(--cinema-border);">
-                    <i class="bi bi-people text-gold display-4"></i>
-                </div>
-                <div class="p-3">
-                    <span class="badge bg-info mb-1">Cast &amp; Crew</span>
-                    <h6 class="fw-bold text-white mb-0">Workshop &amp; Character Readings</h6>
-                </div>
-            </div>
-        </div>
-
-        <!-- Gallery Item 6 -->
-        <div class="col-sm-6 col-lg-4">
-            <div class="film-card overflow-hidden">
-                <div class="d-flex align-items-center justify-content-center bg-dark" style="height: 240px; border-bottom: 1px solid var(--cinema-border);">
-                    <i class="bi bi-sliders text-gold display-4"></i>
-                </div>
-                <div class="p-3">
-                    <span class="badge bg-secondary mb-1">Studio Sessions</span>
-                    <h6 class="fw-bold text-white mb-0">Orchestral Score &amp; Audio Post</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        <!-- Footer -->
 @endsection
-

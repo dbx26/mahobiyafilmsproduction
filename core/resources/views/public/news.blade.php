@@ -1,51 +1,125 @@
-@extends('public.layouts.app')
+﻿@extends('public.layouts.app')
 
-@section('title', 'News & Updates - Mahobiya Films Production')
+@section('title', 'Blog - Moovi')
 
 @section('content')
-<div class="py-5 text-center" style="background: linear-gradient(180deg, #16181f 0%, #0b0c10 100%); border-bottom: 1px solid rgba(229, 169, 59, 0.2);">
-    <div class="container py-4">
-        <h1 class="display-4 fw-bold text-white brand-font mb-2">NEWS &amp; ANNOUNCEMENTS</h1>
-        <p class="text-gold text-uppercase fw-semibold" style="letter-spacing: 2px;">Press Releases • CBFC Certifications • Film Updates</p>
-    </div>
-</div>
-
-<div class="container py-5">
-    <div class="row g-4">
-        <!-- News Article 1 -->
-        <div class="col-lg-6">
-            <div class="film-card p-4 h-100">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="badge bg-gold text-dark fw-bold">Official Milestone</span>
-                    <small class="text-white-50">September 2026</small>
-                </div>
-                <h4 class="fw-bold text-white mb-2">CBFC Certification Received for "Mahakavya Shri Ramayan Katha Shri Ram Ki"</h4>
-                <p class="text-white-50 small lh-base mb-3">
-                    Mahobiya Films Production Private Limited was officially certified by the Central Board of Film Certification (CBFC) in September 2026 as the producer for the promotional trailers of Hindi feature film <em>Mahakavya Shri Ramayan Katha Shri Ram Ki</em>.
-                </p>
-                <div class="small text-gold">
-                    <i class="bi bi-check-circle-fill me-1"></i> Certified for Theatrical &amp; Digital Broadcast
+        <!-- Page Title -->
+        <div class="page-title-area">
+            <div class="container">
+                <div class="page-title-item">
+                    <h2>Blog</h2>
+                    <ul>
+                        <li>
+                            <a href="{{ route('home') }}">Home</a>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>Blog</li>
+                    </ul>
                 </div>
             </div>
         </div>
+        <!-- End Page Title -->
 
-        <!-- News Article 2 -->
-        <div class="col-lg-6">
-            <div class="film-card p-4 h-100">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="badge bg-primary fw-bold">Expansion</span>
-                    <small class="text-white-50">September 2023 - Present</small>
-                </div>
-                <h4 class="fw-bold text-white mb-2">Studio Foundation &amp; Regional Cinema Slate</h4>
-                <p class="text-white-50 small lh-base mb-3">
-                    Incorporated on September 15, 2023, Mahobiya Films Production Private Limited has embarked on a multi-genre pipeline covering both grand mythological features and regional stories from Chhattisgarh and Central India.
-                </p>
-                <div class="small text-gold">
-                    <i class="bi bi-camera-reels me-1"></i> Motion Pictures &amp; OTT Productions
+        <!-- Blog -->
+        <section class="blog-area blog-area-two pt-100 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="blog-item">
+                            <a href="blog-details.html">
+                                <img src="{{ asset('assets/') }}/img/home-one/blog1.jpg" alt="Blog">
+                            </a>
+                            <div class="blog-bottom">
+                                <span>17 March 2026</span>
+                                <h3>
+                                    <a href="blog-details.html">Get Ready To Make Awesome</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                <a class="blog-btn" href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="blog-item">
+                            <a href="blog-details.html">
+                                <img src="{{ asset('assets/') }}/img/home-one/blog2.jpg" alt="Blog">
+                            </a>
+                            <div class="blog-bottom">
+                                <span>18 March 2026</span>
+                                <h3>
+                                    <a href="blog-details.html">The Best Design Film</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                <a class="blog-btn" href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="blog-item">
+                            <a href="blog-details.html">
+                                <img src="{{ asset('assets/') }}/img/home-one/blog3.jpg" alt="Blog">
+                            </a>
+                            <div class="blog-bottom">
+                                <span>19 March 2026</span>
+                                <h3>
+                                    <a href="blog-details.html">Enjoy The Movie Drama</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                <a class="blog-btn" href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="blog-item">
+                            <a href="blog-details.html">
+                                <img src="{{ asset('assets/') }}/img/home-one/blog4.jpg" alt="Blog">
+                            </a>
+                            <div class="blog-bottom">
+                                <span>20 March 2026</span>
+                                <h3>
+                                    <a href="blog-details.html">It Has Been Most Watched</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                <a class="blog-btn" href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="blog-item">
+                            <a href="blog-details.html">
+                                <img src="{{ asset('assets/') }}/img/home-one/blog5.jpg" alt="Blog">
+                            </a>
+                            <div class="blog-bottom">
+                                <span>21 March 2026</span>
+                                <h3>
+                                    <a href="blog-details.html">The Movie Has Been Awarded</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                <a class="blog-btn" href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="blog-item">
+                            <a href="blog-details.html">
+                                <img src="{{ asset('assets/') }}/img/home-one/blog6.jpg" alt="Blog">
+                            </a>
+                            <div class="blog-bottom">
+                                <span>22 March 2026</span>
+                                <h3>
+                                    <a href="blog-details.html">Watch The Best Film</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                <a class="blog-btn" href="blog-details.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        </section>
+        <!-- End Blog -->
+
+        <!-- Footer -->
 @endsection
-

@@ -1,56 +1,107 @@
-@extends('public.layouts.app')
+﻿@extends('public.layouts.app')
 
-@section('title', 'Videos & Trailers - Mahobiya Films Production')
+@section('title', 'Videos - Moovi')
 
 @section('content')
-<div class="py-5 text-center" style="background: linear-gradient(180deg, #16181f 0%, #0b0c10 100%); border-bottom: 1px solid rgba(229, 169, 59, 0.2);">
-    <div class="container py-4">
-        <h1 class="display-4 fw-bold text-white brand-font mb-2">VIDEOS &amp; TRAILERS</h1>
-        <p class="text-gold text-uppercase fw-semibold" style="letter-spacing: 2px;">Official Film Trailers • Teasers • Interviews • Behind The Scenes</p>
-    </div>
-</div>
-
-<div class="container py-5">
-    <div class="row g-4 justify-content-center">
-        <!-- Main Trailer Feature -->
-        <div class="col-lg-10 mb-4">
-            <div class="film-card p-4">
-                <div class="ratio ratio-16x9 rounded overflow-hidden mb-4 bg-black border border-secondary">
-                    <div class="d-flex flex-column align-items-center justify-content-center text-center p-4">
-                        <i class="bi bi-play-circle-fill text-gold display-1 mb-3"></i>
-                        <h4 class="text-white fw-bold mb-1">Mahakavya Shri Ramayan Katha Shri Ram Ki</h4>
-                        <p class="text-white-50 small mb-3">Official CBFC-Certified Teaser Trailer</p>
-                        <a href="https://www.youtube.com" target="_blank" class="btn btn-gold btn-sm px-4">
-                            <i class="bi bi-youtube me-1"></i> Watch on YouTube Channel
-                        </a>
-                    </div>
+        <!-- Page Title -->
+        <div class="page-title-area">
+            <div class="container">
+                <div class="page-title-item">
+                    <h2>Video</h2>
+                    <ul>
+                        <li>
+                            <a href="{{ route('home') }}">Home</a>
+                        </li>
+                        <li>
+                            <span></span>
+                        </li>
+                        <li>Video</li>
+                    </ul>
                 </div>
-                <div class="d-flex flex-wrap justify-content-between align-items-center">
-                    <div>
-                        <span class="badge bg-gold text-dark mb-1">Official Trailer</span>
-                        <h4 class="fw-bold text-white mb-0">Teaser 1: Katha Shri Ram Ki</h4>
+            </div>
+        </div>
+        <!-- End Page Title -->
+
+        <!-- Week -->
+        <div class="week-area pt-100 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="week-item week-video-btn-two">
+                            <img src="{{ asset('assets/') }}/img/home-one/week4.jpg" alt="Week">
+                            <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" class="popup-youtube">
+                                <i class='bx bx-play'></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="text-white-50 small">
-                        CBFC Certified • September 2026
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="week-item week-video-btn-two">
+                            <img src="{{ asset('assets/') }}/img/home-one/week5.jpg" alt="Week">
+                            <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" class="popup-youtube">
+                                <i class='bx bx-play'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="week-item week-video-btn-two">
+                            <img src="{{ asset('assets/') }}/img/home-one/week6.jpg" alt="Week">
+                            <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" class="popup-youtube">
+                                <i class='bx bx-play'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="week-item week-video-btn-two">
+                            <img src="{{ asset('assets/') }}/img/home-one/week7.jpg" alt="Week">
+                            <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" class="popup-youtube">
+                                <i class='bx bx-play'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="week-item week-video-btn-two">
+                            <img src="{{ asset('assets/') }}/img/home-one/week8.jpg" alt="Week">
+                            <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" class="popup-youtube">
+                                <i class='bx bx-play'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="week-item week-video-btn-two">
+                            <img src="{{ asset('assets/') }}/img/home-one/week9.jpg" alt="Week">
+                            <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" class="popup-youtube">
+                                <i class='bx bx-play'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="week-item week-video-btn-two">
+                            <img src="{{ asset('assets/') }}/img/home-one/week10.jpg" alt="Week">
+                            <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" class="popup-youtube">
+                                <i class='bx bx-play'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="week-item week-video-btn-two">
+                            <img src="{{ asset('assets/') }}/img/home-one/week11.jpg" alt="Week">
+                            <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" class="popup-youtube">
+                                <i class='bx bx-play'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="week-item week-video-btn-two">
+                            <img src="{{ asset('assets/') }}/img/home-one/week12.jpg" alt="Week">
+                            <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" class="popup-youtube">
+                                <i class='bx bx-play'></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End Week -->
 
-        <!-- YouTube Channel Connect Card -->
-        <div class="col-lg-10">
-            <div class="p-4 p-md-5 rounded text-center border border-secondary" style="background-color: var(--cinema-dark-alt);">
-                <i class="bi bi-youtube text-danger display-4 mb-2 d-block"></i>
-                <h3 class="fw-bold text-white mb-2 brand-font">Subscribe to Mahobiya Films on YouTube</h3>
-                <p class="text-white-50 mx-auto mb-4" style="max-width: 600px;">
-                    Stay updated with all upcoming official trailers, promo teasers, cast interviews, and behind-the-scenes footage by subscribing to our official channel.
-                </p>
-                <a href="https://www.youtube.com" target="_blank" class="btn btn-gold px-4">
-                    Visit Official YouTube Channel
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+        <!-- Footer -->
 @endsection
-

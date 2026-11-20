@@ -12,7 +12,7 @@ class ExampleTest extends TestCase
      */
     public function test_public_routes_return_successful_response(): void
     {
-        $routes = ['/', '/about', '/films', '/team', '/gallery', '/videos', '/news', '/contact', '/auth/login', '/auth/register', '/auth/forgot-password'];
+        $routes = ['/', '/about', '/films', '/films/sample-film', '/team', '/gallery', '/videos', '/news', '/contact', '/auth/login', '/auth/register', '/auth/forgot-password'];
         foreach ($routes as $route) {
             $response = $this->get($route);
             $response->assertStatus(200);
