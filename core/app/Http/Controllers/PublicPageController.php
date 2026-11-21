@@ -59,7 +59,50 @@ class PublicPageController extends Controller
      */
     public function videos()
     {
-        return view('public.videos');
+        $shorts = \App\Services\YouTubeService::getLatestShorts('@MSERIES-BHILAI', 10);
+
+        $movies = [
+            [
+                'title' => 'Mahakavya Shri Ramayan Katha',
+                'slug' => 'mahakavya-shri-ramayan-katha',
+                'category' => 'Feature Film',
+                'language' => 'Hindi & Chhattisgarhi',
+                'release_date' => '25 September 2026',
+                'poster' => 'images/poster_ramayan.jpg',
+                'videos' => [
+                    [
+                        'title' => 'Hindi Official Trailer',
+                        'type' => 'Official Trailer',
+                        'language' => 'Hindi',
+                        'thumbnail' => 'images/ramayan_video_preview.jpg',
+                        'youtube_url' => 'https://www.youtube.com/watch?v=lUhw32rt_dE',
+                    ],
+                    [
+                        'title' => 'Hindi Official Teaser',
+                        'type' => 'Official Teaser',
+                        'language' => 'Hindi',
+                        'thumbnail' => 'images/ramayan_hindi_teaser.jpg',
+                        'youtube_url' => 'https://www.youtube.com/watch?v=NP5ebSjn-_I',
+                    ],
+                    [
+                        'title' => 'Chhattisgarhi Official Trailer',
+                        'type' => 'Official Trailer',
+                        'language' => 'Chhattisgarhi',
+                        'thumbnail' => 'images/ramayan_cg_trailer.jpg',
+                        'youtube_url' => 'https://www.youtube.com/watch?v=-BOLkzuT4MQ',
+                    ],
+                    [
+                        'title' => 'Chhattisgarhi Official Teaser',
+                        'type' => 'Official Teaser',
+                        'language' => 'Chhattisgarhi',
+                        'thumbnail' => 'images/ramayan_cg_teaser.jpg',
+                        'youtube_url' => 'https://www.youtube.com/watch?v=15O23p7yQu4',
+                    ],
+                ]
+            ]
+        ];
+
+        return view('public.videos', compact('shorts', 'movies'));
     }
 
     /**

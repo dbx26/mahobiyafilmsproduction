@@ -260,8 +260,8 @@
   /*----- About CSS -----*/
   /*-- Page Title --*/
   .page-title-area .page-title-item {
-    padding-top: 130px;
-    padding-bottom: 95px;
+    padding-top: 100px;
+    padding-bottom: 30px;
   }
   .page-title-area .page-title-item h2 {
     font-size: 25px;
@@ -682,8 +682,8 @@
   /*----- About CSS -----*/
   /*-- Page Title --*/
   .page-title-area .page-title-item {
-    padding-top: 130px;
-    padding-bottom: 95px;
+    padding-top: 100px;
+    padding-bottom: 30px;
   }
   .page-title-area .page-title-item h2 {
     font-size: 25px;
@@ -909,5 +909,465 @@
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1320px;
     width: 100%;
+  }
+}
+
+/*========================================================================
+  Comprehensive Responsiveness for All 5 Studio Pages:
+  1. Our Films (/films & /films/mahakavya-shri-ramayan-katha)
+  2. Videos (/videos)
+  3. Our Team (/team)
+  4. News & Updates (/news)
+  5. Contact Us (/contact)
+========================================================================*/
+
+/* Prevent horizontal scroll jitter on mobile devices */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/*------------------------------------------------
+  1. Tablet Screens (768px to 991px)
+-------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Our Films */
+  .film-card-horizontal .film-card-poster {
+    min-height: 360px;
+  }
+  .film-card-horizontal .film-card-body {
+    padding: 30px 24px;
+  }
+  .film-card-horizontal .film-card-body h3 {
+    font-size: 24px;
+  }
+
+  /* Film Detail */
+  .work-details-work {
+    margin-top: 30px;
+  }
+  .cast-grid-five {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .crew-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  /* Videos */
+  .movie-showcase-panel {
+    padding: 26px 22px;
+  }
+  .reels-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  /* Our Team */
+  .leadership-photo-wrap {
+    width: 220px;
+    height: 220px;
+  }
+  .team-leadership-card {
+    padding: 32px 22px;
+  }
+  .leadership-name {
+    font-size: 22px;
+  }
+  .division-card {
+    padding: 26px 20px;
+  }
+
+  /* News & Updates */
+  .featured-news-card .featured-news-content {
+    padding: 28px 24px;
+  }
+  .featured-news-title {
+    font-size: 22px;
+  }
+
+  /* Contact Us */
+  .contact-form-card,
+  .contact-info-card {
+    padding: 32px 24px;
+  }
+}
+
+/*------------------------------------------------
+  2. Mobile Devices (max-width: 767px)
+-------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+  /* General Typography & Spacing */
+  .section-title {
+    margin-bottom: 30px;
+  }
+  .section-title h2 {
+    font-size: 24px !important;
+  }
+  .section-title p {
+    font-size: 14px !important;
+    margin-bottom: 25px !important;
+  }
+  .page-title-item h2 {
+    font-size: 26px !important;
+  }
+
+  /* 1. Our Films (/films) */
+  .film-card-horizontal {
+    margin-bottom: 25px;
+  }
+  .film-card-horizontal .film-card-poster {
+    min-height: auto;
+    height: 320px;
+  }
+  .film-card-horizontal .film-card-body {
+    padding: 24px 18px;
+  }
+  .film-card-horizontal .film-card-body h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .film-card-horizontal .film-synopsis {
+    font-size: 14.5px;
+    margin-bottom: 20px;
+  }
+  .film-card-horizontal .film-action {
+    gap: 10px;
+  }
+  .film-card-btn,
+  .film-trailer-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  /* 1.1 Film Detail Page */
+  .work-details-area {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  .work-details-item .work-details-content h3 {
+    font-size: 22px;
+  }
+  .work-details-work {
+    margin-top: 30px;
+    padding: 24px 18px;
+  }
+  .film-cast-section {
+    margin-top: 35px;
+    padding-top: 25px;
+  }
+  .film-cast-section .section-header {
+    margin-bottom: 18px;
+  }
+  .film-cast-section .section-header h3 {
+    font-size: 20px;
+  }
+  .cast-grid-five {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .team-cast-card {
+    padding: 18px 10px 14px;
+  }
+  .team-cast-avatar {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 10px;
+  }
+  .team-cast-name {
+    font-size: 14px;
+  }
+  .team-cast-character {
+    font-size: 12.5px;
+    margin-bottom: 8px;
+  }
+  .team-cast-tag {
+    font-size: 9px;
+    padding: 2px 7px;
+  }
+  .crew-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .crew-card {
+    padding: 12px 12px;
+  }
+  .crew-card .crew-role {
+    font-size: 10px;
+  }
+  .crew-card .crew-name {
+    font-size: 13.5px;
+  }
+  .music-artists-list {
+    gap: 8px;
+  }
+  .music-artist-pill {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  /* 2. Videos (/videos) */
+  .movie-showcase-panel {
+    padding: 20px 16px;
+    margin-bottom: 30px;
+  }
+  .showcase-header {
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+  }
+  .showcase-title {
+    font-size: 18px;
+  }
+  .showcase-poster {
+    width: 48px;
+    height: 68px;
+  }
+  .showcase-video-card {
+    margin-bottom: 4px;
+  }
+  .showcase-video-thumb {
+    aspect-ratio: 16 / 9;
+  }
+  .showcase-video-body {
+    padding: 10px 10px 12px;
+  }
+  .showcase-video-type {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .showcase-video-link {
+    font-size: 11px;
+  }
+  .channel-callout-banner {
+    padding: 28px 20px;
+    margin-top: 30px;
+  }
+  .channel-callout-banner h3 {
+    font-size: 22px;
+  }
+  .channel-callout-banner p {
+    font-size: 14px;
+  }
+  .reels-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+
+  /* 3. Our Team (/team) */
+  .team-leadership-card {
+    padding: 28px 18px;
+  }
+  .leadership-photo-wrap {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .leadership-name {
+    font-size: 22px;
+  }
+  .leadership-title {
+    font-size: 13px;
+  }
+  .leadership-bio {
+    font-size: 14.5px;
+    margin-bottom: 16px;
+  }
+  .leadership-insta-btn {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+  .division-card {
+    padding: 22px 18px;
+  }
+  .division-card h3 {
+    font-size: 18px;
+  }
+  .studio-fact-card {
+    padding: 22px 18px;
+  }
+
+  /* 4. News & Updates (/news) */
+  .featured-news-card {
+    margin-bottom: 30px;
+  }
+  .featured-news-card .featured-news-img {
+    min-height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  .featured-news-card .featured-news-content {
+    padding: 24px 18px;
+  }
+  .featured-news-title {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .featured-news-excerpt {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+  .blog-area-two .blog-item {
+    margin-bottom: 24px;
+  }
+  .blog-area-two .blog-item .blog-bottom {
+    padding: 18px 16px 20px;
+  }
+  .blog-area-two .blog-item .blog-bottom h3 {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+  .blog-area-two .blog-item .blog-bottom p {
+    font-size: 13.5px;
+  }
+
+  /* 5. Contact Us (/contact) */
+  .contact-area {
+    padding-top: 50px;
+    padding-bottom: 35px;
+  }
+  .contact-form-card,
+  .contact-info-card {
+    padding: 26px 18px;
+  }
+  .contact-form-card h3,
+  .contact-info-card h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+  .contact-form-card p.form-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .contact-form-card .form-group {
+    margin-bottom: 16px;
+  }
+  .contact-form-card .form-control {
+    height: 46px;
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+  .contact-info-item {
+    gap: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+  .contact-info-item .info-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 20px;
+  }
+  .contact-info-item .info-details h4 {
+    font-size: 15px;
+  }
+  .contact-info-item .info-details span,
+  .contact-info-item .info-details a {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  .contact-map-wrapper {
+    margin-top: 35px;
+  }
+  .contact-map-wrapper iframe {
+    height: 280px;
+  }
+}
+
+/*------------------------------------------------
+  3. Small Mobile Screens (max-width: 480px)
+-------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+  /* Our Films */
+  .film-card-horizontal .film-action {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .film-card-btn,
+  .film-trailer-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .film-card-horizontal .film-card-body h3 {
+    font-size: 20px;
+  }
+
+  /* Film Details Cast */
+  .cast-grid-five {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .team-cast-card {
+    padding: 14px 6px 12px;
+  }
+  .team-cast-avatar {
+    width: 68px;
+    height: 68px;
+  }
+  .team-cast-name {
+    font-size: 13px;
+  }
+  .team-cast-character {
+    font-size: 11.5px;
+  }
+  .crew-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* Videos */
+  .showcase-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .showcase-detail-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .reels-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .channel-callout-banner .banner-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Our Team */
+  .leadership-photo-wrap {
+    width: 175px;
+    height: 175px;
+  }
+  .leadership-name {
+    font-size: 20px;
+  }
+  .leadership-bio {
+    font-size: 13.5px;
+  }
+
+  /* News & Updates */
+  .featured-news-title {
+    font-size: 18px;
+  }
+  .news-meta-bar {
+    gap: 6px;
+  }
+  .news-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  .news-date {
+    font-size: 11px;
+  }
+
+  /* Contact Us */
+  .contact-submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .contact-map-wrapper iframe {
+    height: 240px;
   }
 }/*# sourceMappingURL=responsive.css.map */

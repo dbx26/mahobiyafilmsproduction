@@ -1,123 +1,90 @@
-﻿@extends('public.layouts.app')
+@extends('public.layouts.app')
 
-@section('title', 'Works - Moovi')
+@section('title', 'Our Films - Mahobiya Films Production')
 
 @section('content')
-        <!-- Page Title -->
-        <div class="page-title-area">
-            <div class="container">
-                <div class="page-title-item">
-                    <h2>Work</h2>
-                    <ul>
-                        <li>
-                            <a href="{{ route('home') }}">Home</a>
-                        </li>
-                        <li>
-                            <span></span>
-                        </li>
-                        <li>Work</li>
-                    </ul>
+
+    <!-- Page Title / Banner -->
+    <div class="page-title-area">
+        <div class="container">
+            <div class="page-title-item">
+                <h2>Our Films</h2>
+                <p>Stories That Come Alive on Screen.</p>
+                <ul>
+                    <li>
+                        <a href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li>
+                        <span></span>
+                    </li>
+                    <li>Our Films</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Film Catalog Section (Crisp White Background) -->
+    <section class="work-area work-area-two pt-100 pb-70">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="sub-title">Cinematic Catalog</span>
+                <h2>Stories That Come Alive on Screen</h2>
+                <p class="catalog-intro-text">Explore the films and cinematic projects produced by Mahobiya Films Production. Every project represents our interest in storytelling, creativity and bringing meaningful experiences to audiences.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Film Card: Mahakavya Shri Ramayan Katha -->
+                <div class="col-lg-10">
+                    <div class="film-card-horizontal">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-5 col-lg-4">
+                                <div class="film-card-poster">
+                                    <img src="{{ asset('images/poster_ramayan.jpg') }}" alt="Mahakavya Shri Ramayan Katha">
+                                    <span class="film-badge">Feature Film</span>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-8">
+                                <div class="film-card-body">
+                                    <span class="film-genre">Feature Film &middot; Hindi &amp; Chhattisgarhi</span>
+                                    <h3>
+                                        <a href="{{ route('film.detail', 'mahakavya-shri-ramayan-katha') }}">Mahakavya Shri Ramayan Katha</a>
+                                    </h3>
+                                    <div class="film-meta">
+                                        <span><i class='bx bx-calendar'></i> Released: 25 September 2026</span>
+                                    </div>
+                                    <p class="film-synopsis">A cinematic presentation inspired by the timeless story of Shri Ramayan.</p>
+                                    <div class="film-action">
+                                        <a href="{{ route('film.detail', 'mahakavya-shri-ramayan-katha') }}" class="film-card-btn">Explore Film Details <i class='bx bx-right-arrow-alt'></i></a>
+                                        <a href="https://www.youtube.com/watch?v=lUhw32rt_dE" class="film-trailer-btn popup-youtube">
+                                            <i class='bx bx-play-circle'></i> Watch Trailer
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- End Page Title -->
+    </section>
+    <!-- End Film Catalog Section -->
 
-        <!-- Work -->
-        <section class="work-area work-area-three pt-100 pb-70">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6 col-lg-6">
-                        <a href="{{ route('film.detail', 'work-details') }}">
-                            <div class="work-item">
-                                <img src="{{ asset('assets/') }}/img/home-one/work1.jpg" alt="Work">
-                                <div class="work-content">
-                                    <h3>My Dream Stranger</h3>
-                                    <span>Music ViDEO</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-6">
-                        <a href="{{ route('film.detail', 'work-details') }}">
-                            <div class="work-item">
-                                <img src="{{ asset('assets/') }}/img/home-one/work2.jpg" alt="Work">
-                                <div class="work-content">
-                                    <h3>Back To You</h3>
-                                    <span>Advertising Music Video</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-6">
-                        <a href="{{ route('film.detail', 'work-details') }}">
-                            <div class="work-item">
-                                <img src="{{ asset('assets/') }}/img/home-one/work3.jpg" alt="Work">
-                                <div class="work-content">
-                                    <h3>We Make it awesome</h3>
-                                    <span>Commercial Music Video</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-6">
-                        <a href="{{ route('film.detail', 'work-details') }}">
-                            <div class="work-item">
-                                <img src="{{ asset('assets/') }}/img/home-one/work4.jpg" alt="Work">
-                                <div class="work-content">
-                                    <h3>My Dream Girl</h3>
-                                    <span>Commercial Music Video</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-6">
-                        <a href="{{ route('film.detail', 'work-details') }}">
-                            <div class="work-item">
-                                <img src="{{ asset('assets/') }}/img/home-one/work5.jpg" alt="Work">
-                                <div class="work-content">
-                                    <h3>Love Me Like You</h3>
-                                    <span>Romantic Music ViDEO</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-6">
-                        <a href="{{ route('film.detail', 'work-details') }}">
-                            <div class="work-item">
-                                <img src="{{ asset('assets/') }}/img/home-one/work6.jpg" alt="Work">
-                                <div class="work-content">
-                                    <h3>Shape Of You</h3>
-                                    <span>Advertising Music Video</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-6">
-                        <a href="{{ route('film.detail', 'work-details') }}">
-                            <div class="work-item">
-                                <img src="{{ asset('assets/') }}/img/home-one/work7.jpg" alt="Work">
-                                <div class="work-content">
-                                    <h3>Imagine Dragons - Believer</h3>
-                                    <span>Commercial Music Video</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-6">
-                        <a href="{{ route('film.detail', 'work-details') }}">
-                            <div class="work-item">
-                                <img src="{{ asset('assets/') }}/img/home-one/work8.jpg" alt="Work">
-                                <div class="work-content">
-                                    <h3>In The End</h3>
-                                    <span>Commercial Music Video</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+    <!-- Upcoming Projects Section (Dark Cinema Background) -->
+    <section class="trust-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="sub-title">What's Next</span>
+                <h2>More Exciting Projects Coming Soon</h2>
+            </div>
+            <div class="trust-content text-center">
+                <p>We are continuously exploring new stories and creative opportunities to bring fresh cinematic experiences to audiences.</p>
+                <div class="mt-4">
+                    <a class="banner-btn" href="{{ route('contact') }}">Get In Touch</a>
                 </div>
             </div>
-        </section>
-        <!-- End Work -->
+        </div>
+    </section>
+    <!-- End Upcoming Projects Section -->
 
-        <!-- Footer -->
 @endsection
