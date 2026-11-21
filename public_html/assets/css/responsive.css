@@ -1197,6 +1197,9 @@ html, body {
     min-height: auto;
     aspect-ratio: 16 / 9;
   }
+  .featured-news-poster-wrap {
+    min-height: 360px;
+  }
   .featured-news-card .featured-news-content {
     padding: 24px 18px;
   }
@@ -1217,6 +1220,7 @@ html, body {
   .blog-area-two .blog-item .blog-bottom h3 {
     font-size: 18px;
     line-height: 1.35;
+    min-height: auto;
   }
   .blog-area-two .blog-item .blog-bottom p {
     font-size: 13.5px;
@@ -1318,6 +1322,66 @@ html, body {
     font-size: 13px;
     line-height: 1.6;
     padding: 0 10px;
+  }
+
+  /* About Us Vision Section */
+  .about-vision-section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  .about-vision-section .vision-media-frame img {
+    height: 320px;
+  }
+  .about-vision-section .section-title h2 {
+    font-size: 28px;
+  }
+  .about-vision-section .narrative-body p.lead-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .about-vision-section .narrative-body p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .about-vision-section + .service-area-two .service-item {
+    padding: 25px 20px 25px 70px;
+  }
+  .about-vision-section + .service-area-two .service-item i {
+    left: 20px;
+    top: 25px;
+    font-size: 32px;
+  }
+
+  /* About Us Featured Production */
+  .about-featured-work .section-title h2 {
+    font-size: 26px !important;
+  }
+  .about-featured-work .work-details-img a {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+  .about-featured-work .work-details-content .work-meta-list li {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .about-featured-work .work-details-content p {
+    font-size: 15px;
+  }
+
+  /* Upcoming Film Spotlight */
+  .upcoming-film-poster-wrap {
+    max-width: 250px;
+    margin-bottom: 25px;
+  }
+  .upcoming-film-content .upcoming-film-title {
+    font-size: 26px !important;
+  }
+  .upcoming-film-content .upcoming-tagline {
+    font-size: 16px;
+  }
+  .upcoming-film-content .upcoming-film-meta {
+    justify-content: center;
   }
 }
 
@@ -1429,5 +1493,50 @@ html, body {
   }
   .copyright-area p {
     font-size: 12px;
+  }
+
+  /* About Us Vision Section */
+  .about-vision-section {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+  .about-vision-section .vision-media-frame img {
+    height: 240px;
+  }
+  .about-vision-section .section-title h2 {
+    font-size: 24px;
+  }
+  .about-vision-section .vision-floating-badge {
+    bottom: 12px;
+    left: 12px;
+    padding: 6px 12px;
+  }
+  .about-vision-section .pillar-item {
+    gap: 12px;
+  }
+  .about-vision-section .pillar-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+  .about-vision-section .pillar-icon i {
+    font-size: 18px;
+  }
+
+  /* About Us Featured Production */
+  .about-featured-work .work-details-img a {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  .about-featured-work .work-details-content .work-meta-list li {
+    font-size: 11px;
+  }
+  .about-featured-work .work-details-content .work-meta-list li span {
+    margin: 0 4px;
+  }
+  .about-featured-work .banner-btn {
+    width: 100%;
+    justify-content: center;
   }
 }/*# sourceMappingURL=responsive.css.map */

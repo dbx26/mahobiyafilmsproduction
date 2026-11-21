@@ -51,11 +51,11 @@
                         <i class='bx bxl-instagram'></i>
                     </a>
                 </li>
-                {{-- <li>
-                    <a href="https://facebook.com" target="_blank" title="Facebook">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=61559248942353" target="_blank" title="Facebook">
                         <i class='bx bxl-facebook'></i>
                     </a>
-                </li> --}}
+                </li>
             </ul>
         </div>
         <div class="lines">
@@ -94,14 +94,29 @@
     <!-- Section 3 – Our Upcoming Movies -->
     <section class="week-area pt-100 pb-70">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title text-center">
                 <span class="sub-title">WHAT'S NEXT</span>
                 <h2>Stories Coming Soon</h2>
-            </div>
-            <div class="trust-content text-center">
                 <p>We are continuously exploring new stories and creative opportunities to bring fresh cinematic experiences to audiences.</p>
-                <div class="section-title mt-4">
-                    <span class="sub-title">More Exciting Projects Coming Soon</span>
+            </div>
+            <div class="row justify-content-center align-items-center mt-5">
+                <div class="col-lg-4 col-md-5 mb-4 mb-md-0 text-center">
+                    <div class="upcoming-film-poster-wrap">
+                        <img src="{{ asset('images/ravidas_ek_vichar.avif') }}" alt="Ravidas Ek Vichar - A Period Drama Film">
+                        <span class="upcoming-badge">Coming Soon In Cinemas</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-7">
+                    <div class="upcoming-film-content ps-lg-4 text-center text-md-start">
+                        <span class="upcoming-genre-tag">A Period Drama Film &bull; Biopic &bull; Social Inspiration</span>
+                        <h3 class="upcoming-film-title">Ravidas Ek Vichar</h3>
+                        <p class="upcoming-tagline">"संत रविदास का जीवन, दर्शन और समता का संदेश..."</p>
+                        <p class="upcoming-film-desc">Mahobiya Films Production proudly presents its upcoming landmark biographical period drama celebrating the transformative life, profound spiritual philosophy, and eternal message of universal equality of Sant Ravidas.</p>
+                        <div class="upcoming-film-meta">
+                            <span><i class='bx bx-film'></i> Theatrical Release</span>
+                            <span><i class='bx bx-time'></i> Coming Soon in Cinemas</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

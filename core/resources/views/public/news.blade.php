@@ -33,32 +33,31 @@
                 <p>Official press releases, theatrical release schedules, trailer announcements, and verified media coverage from Mahobiya Films Production.</p>
             </div>
 
-            <!-- Featured Headline Press Release -->
+            <!-- Featured Headline Press Release: Ravidas Ek Vichar (Upcoming Movie Shown First) -->
             <div class="featured-news-card">
                 <div class="row g-0 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="featured-news-img">
-                            <img src="{{ asset('images/banner_ramayan.jpg') }}" alt="Mahobiya Films Presents Mahakavya Shri Ramayan Katha">
+                    <div class="col-md-5 col-lg-4">
+                        <div class="featured-news-poster-wrap">
+                            <a href="{{ asset('images/ravidas_ek_vichar.avif') }}" class="popup-image d-block w-100 h-100" title="Ravidas Ek Vichar - Official Theatrical Poster">
+                                <img src="{{ asset('images/ravidas_ek_vichar.avif') }}" alt="Ravidas Ek Vichar - Official Theatrical First Look Poster" class="featured-poster-img">
+                            </a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-7 col-lg-8">
                         <div class="featured-news-content">
                             <div class="news-meta-bar">
-                                <span class="news-badge">Official Press Announcement</span>
-                                <span class="news-date">25 September 2026 &middot; Nationwide Theatrical Release</span>
+                                <span class="news-badge" style="background-color: #c1ab65; color: #080808; border-color: #c1ab65;">Upcoming Production &middot; First Look</span>
+                                <span class="news-date">A Period Drama Film &middot; Coming Soon in Cinemas</span>
                             </div>
                             <h3 class="featured-news-title">
-                                <a href="{{ route('film.detail', 'mahakavya-shri-ramayan-katha') }}">Mahobiya Films Production Announces Theatrical Release of 'Mahakavya Shri Ramayan Katha'</a>
+                                <a href="{{ route('films') }}">First Look Unveiled: 'Ravidas Ek Vichar' Announced as Next Period Drama</a>
                             </h3>
                             <p class="featured-news-excerpt">
-                                Mahobiya Films Production, founded by Prakash Mahobiya and Sanjay Bundela, today officially announced the nationwide theatrical release of its landmark mythological cinematic feature 'Mahakavya Shri Ramayan Katha'. Directed by Abhishek Singh, the production brings the sacred lore and civilizational ethos of Shri Ramayan to the silver screen simultaneously in Hindi and Chhattisgarhi.
+                                Mahobiya Films Production officially revealed the first look poster for its upcoming biographical period drama 'Ravidas Ek Vichar'. Chronicling the transformative life, profound spiritual philosophy, and universal message of equality of Sant Ravidas (संत रविदास का जीवन, दर्शन और समता का संदेश...), the production marks the studio's next major cinematic venture for silver screens nationwide.
                             </p>
                             <div class="d-flex flex-wrap gap-2">
-                                <a href="{{ route('film.detail', 'mahakavya-shri-ramayan-katha') }}" class="showcase-detail-btn">
-                                    Explore Film Details <i class='bx bx-right-arrow-alt'></i>
-                                </a>
-                                <a href="https://www.youtube.com/watch?v=lUhw32rt_dE" class="popup-youtube showcase-detail-btn" style="background-color: transparent; color: #080808; border: 1px solid #c1ab65;">
-                                    <i class='bx bx-play'></i> Watch Trailer
+                                <a href="{{ route('films') }}" class="showcase-detail-btn">
+                                    Explore Upcoming Slate <i class='bx bx-right-arrow-alt'></i>
                                 </a>
                             </div>
                         </div>
@@ -69,8 +68,31 @@
 
             <!-- Verified Studio News & Press Grid -->
             <div class="row">
-                <!-- Article 1: Hindi Trailer Release -->
-                <div class="col-md-6 mb-4">
+                <!-- Article 1: Theatrical Release Announcement (Mahakavya Shri Ramayan Katha) -->
+                <div class="col-md-6 mb-4 d-flex">
+                    <div class="blog-item">
+                        <a href="{{ route('film.detail', 'mahakavya-shri-ramayan-katha') }}" class="blog-thumb">
+                            <img src="{{ asset('images/banner_ramayan.jpg') }}" alt="Mahobiya Films Production Announces Theatrical Release of Mahakavya Shri Ramayan Katha">
+                        </a>
+                        <div class="blog-bottom">
+                            <div class="news-meta">
+                                <span class="news-category">Theatrical Release</span>
+                                <span class="news-source"><i class='bx bx-film'></i> Studio Press</span>
+                                <span class="news-date">25 September 2026</span>
+                            </div>
+                            <h3>
+                                <a href="{{ route('film.detail', 'mahakavya-shri-ramayan-katha') }}">Mahobiya Films Production Announces Theatrical Release of 'Mahakavya Shri Ramayan Katha'</a>
+                            </h3>
+                            <p>Mahobiya Films Production officially announced the nationwide theatrical release of its landmark mythological cinematic feature 'Mahakavya Shri Ramayan Katha', directed by Abhishek Singh, releasing simultaneously in Hindi and Chhattisgarhi.</p>
+                            <a class="blog-btn" href="{{ route('film.detail', 'mahakavya-shri-ramayan-katha') }}">
+                                Explore Film Details <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2: Hindi Trailer Release -->
+                <div class="col-md-6 mb-4 d-flex">
                     <div class="blog-item">
                         <a href="https://www.youtube.com/watch?v=lUhw32rt_dE" class="popup-youtube blog-thumb">
                             <img src="{{ asset('images/ramayan_video_preview.jpg') }}" alt="Official Hindi Theatrical Trailer">
@@ -92,8 +114,8 @@
                     </div>
                 </div>
 
-                <!-- Article 2: Chhattisgarhi Regional Trailer -->
-                <div class="col-md-6 mb-4">
+                <!-- Article 3: Chhattisgarhi Regional Trailer -->
+                <div class="col-md-6 mb-4 d-flex">
                     <div class="blog-item">
                         <a href="https://www.youtube.com/watch?v=-BOLkzuT4MQ" class="popup-youtube blog-thumb">
                             <img src="{{ asset('images/ramayan_cg_trailer.jpg') }}" alt="Dedicated Chhattisgarhi Regional Trailer">
@@ -115,8 +137,8 @@
                     </div>
                 </div>
 
-                <!-- Article 3: Original Soundtrack Single with Javed Ali -->
-                <div class="col-md-6 mb-4">
+                <!-- Article 4: Original Soundtrack Single with Javed Ali -->
+                <div class="col-md-6 mb-4 d-flex">
                     <div class="blog-item">
                         <a href="https://www.youtube.com/watch?v=f2vO_aI_m98" class="popup-youtube blog-thumb">
                             <img src="{{ asset('images/ramayan_hindi_teaser.jpg') }}" alt="Javed Ali Siya Ram Soundtrack Single">
@@ -131,18 +153,42 @@
                                 <a href="https://www.youtube.com/watch?v=f2vO_aI_m98" class="popup-youtube">Playback Singer Javed Ali Collaborates with M Series – Bhilai</a>
                             </h3>
                             <p>Renowned playback artist Javed Ali renders the soulful devotional anthem "Siya Ram", composed by Ashish Donald and Dev Chauhaan with lyrics by Jaidev Jonwal, anchoring an expansive soundtrack featuring Kailash Kher and Shaan.</p>
-                            {{-- <a class="blog-btn popup-youtube" href="https://www.youtube.com/watch?v=f2vO_aI_m98">
-                                Listen on M Series <i class='bx bx-play-circle'></i>
-                            </a> --}}
+                            <a class="blog-btn popup-youtube" href="https://www.youtube.com/watch?v=f2vO_aI_m98">
+                                Listen to Single <i class='bx bx-play-circle'></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Article 4: Media Spotlight on Casting (Anjali Arora & Dev Sharma) -->
-                <div class="col-md-6 mb-4">
+                <!-- Article 5: Chhattisgarhi Regional Teaser -->
+                <div class="col-md-6 mb-4 d-flex">
                     <div class="blog-item">
-                        <a href="{{ route('film.detail', 'mahakavya-shri-ramayan-katha') }}" class="blog-thumb">
-                            <img src="{{ asset('images/poster_ramayan.jpg') }}" alt="Mahakavya Shri Ramayan Katha Theatrical Poster" style="object-position: center 25%;">
+                        <a href="https://www.youtube.com/watch?v=15O23p7yQu4" class="popup-youtube blog-thumb">
+                            <img src="{{ asset('images/ramayan_cg_teaser.jpg') }}" alt="Chhattisgarhi Regional Teaser">
+                        </a>
+                        <div class="blog-bottom">
+                            <div class="news-meta">
+                                <span class="news-category">Regional Cinema</span>
+                                <span class="news-source"><i class='bx bx-film'></i> Regional Release</span>
+                                <span class="news-date">August 2026</span>
+                            </div>
+                            <h3>
+                                <a href="https://www.youtube.com/watch?v=15O23p7yQu4" class="popup-youtube">Dedicated Chhattisgarhi Regional Teaser Released for Central India</a>
+                            </h3>
+                            <p>Celebrating the cultural and linguistic heritage of Chhattisgarh, Mahobiya Films released the dedicated Chhattisgarhi teaser preview, receiving an enthusiastic response from regional cinephiles.</p>
+                            <a class="blog-btn popup-youtube" href="https://www.youtube.com/watch?v=15O23p7yQu4">
+                                Watch Regional Teaser <i class='bx bx-play-circle'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 6: Media Spotlight on Casting (Anjali Arora & Dev Sharma) -->
+                <div class="col-md-6 mb-4 d-flex">
+                    <div class="blog-item">
+                        <a href="{{ asset('images/poster_ramayan.jpg') }}" class="popup-image blog-thumb poster-full-thumb" title="Mahakavya Shri Ramayan Katha - Theatrical Poster">
+                            <img src="{{ asset('images/poster_ramayan.jpg') }}" alt="Mahakavya Shri Ramayan Katha Ambient Backdrop" class="poster-ambient-blur" aria-hidden="true">
+                            <img src="{{ asset('images/poster_ramayan.jpg') }}" alt="Mahakavya Shri Ramayan Katha Theatrical Poster" class="poster-complete-img">
                         </a>
                         <div class="blog-bottom">
                             <div class="news-meta">

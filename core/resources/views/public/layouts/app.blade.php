@@ -168,11 +168,11 @@
                                             <i class='bx bxl-instagram'></i>
                                         </a>
                                     </li>
-                                    {{-- <li>
-                                        <a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+                                    <li>
+                                        <a href="https://www.facebook.com/profile.php?id=61559248942353" target="_blank" rel="noopener" title="Official Mahobiya Films Facebook" aria-label="Facebook">
                                             <i class='bx bxl-facebook'></i>
                                         </a>
-                                    </li> --}}
+                                    </li>
                                 </ul>
                             </div>
                         </div>

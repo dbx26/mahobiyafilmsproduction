@@ -34,6 +34,44 @@
             </div>
 
             <div class="row justify-content-center">
+                <!-- Film Card: Ravidas Ek Vichar (Upcoming Film Highlight) -->
+                <div class="col-lg-10 mb-4">
+                    <div class="film-card-horizontal upcoming-film-card">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-5 col-lg-4">
+                                <div class="film-card-poster">
+                                    <a href="{{ asset('images/ravidas_ek_vichar.avif') }}" class="popup-image d-block w-100 h-100" title="Ravidas Ek Vichar - Official Poster">
+                                        <img src="{{ asset('images/ravidas_ek_vichar.avif') }}" alt="Ravidas Ek Vichar - A Period Drama Film">
+                                        <span class="film-badge" style="background-color: #c1ab65; color: #080808; border-color: #c1ab65;"><i class='bx bx-star'></i> Upcoming Project</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-8">
+                                <div class="film-card-body">
+                                    <div>
+                                        <span class="upcoming-project-badge"><i class='bx bx-sparkles'></i> Next Studio Production</span>
+                                    </div>
+                                    <span class="film-genre">A Period Drama Film &middot; Biopic &middot; Social Inspiration</span>
+                                    <h3>Ravidas Ek Vichar</h3>
+                                    <p class="film-tagline-quote">"संत रविदास का जीवन, दर्शन और समता का संदेश..."</p>
+                                    <div class="film-meta">
+                                        <span><i class='bx bx-calendar-star'></i> Theatrical Release &middot; Coming Soon in Cinemas</span>
+                                    </div>
+                                    <p class="film-synopsis">Mahobiya Films Production proudly presents its upcoming landmark biographical period drama celebrating the transformative life, profound spiritual philosophy, and eternal message of universal equality of Sant Ravidas.</p>
+                                    {{-- <div class="film-action">
+                                        <a href="{{ asset('images/ravidas_ek_vichar.avif') }}" class="film-card-btn popup-image">
+                                            <i class='bx bx-fullscreen'></i> View First Look Poster
+                                        </a>
+                                        <a href="{{ route('news') }}" class="film-trailer-btn">
+                                            <i class='bx bx-news'></i> Read Press Announcement
+                                        </a>
+                                    </div> --}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Film Card: Mahakavya Shri Ramayan Katha -->
                 <div class="col-lg-10">
                     <div class="film-card-horizontal">

@@ -35,7 +35,7 @@
 
             <div class="row justify-content-center">
                 <!-- Prakash Mahobiya -->
-                <div class="col-md-6 col-lg-6 mb-4">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="team-leadership-card">
                         <div class="leadership-photo-wrap">
                             <img src="{{ asset('images/prakash_mahobiya.jpg') }}" alt="Prakash Mahobiya">
@@ -49,7 +49,7 @@
                             <span class="leadership-pill">Theatrical Scale</span>
                         </div>
                         <p class="leadership-bio">"Committed to pioneering cinema that honors our civilizational heritage while establishing benchmark production standards for audiences across India and beyond."</p>
-                        <div class="text-center">
+                        <div class="text-center mt-auto">
                             <a href="https://www.instagram.com/prakashmahobiya/" target="_blank" class="leadership-insta-btn" title="Follow Prakash Mahobiya on Instagram">
                                 <i class='bx bxl-instagram'></i> @prakashmahobiya
                             </a>
@@ -58,7 +58,7 @@
                 </div>
 
                 <!-- Sanjay Bundela -->
-                <div class="col-md-6 col-lg-6 mb-4">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="team-leadership-card">
                         <div class="leadership-photo-wrap">
                             <img src="{{ asset('images/sanjay_bundela.jpg') }}" alt="Sanjay Bundela">
@@ -72,9 +72,32 @@
                             <span class="leadership-pill">Music Label (M Series)</span>
                         </div>
                         <p class="leadership-bio">"Dedicated to robust production execution, nurturing creative talent, and building sustainable regional cinema with global digital distribution."</p>
-                        <div class="text-center">
+                        <div class="text-center mt-auto">
                             <a href="https://www.instagram.com/sanjaybundela_06/" target="_blank" class="leadership-insta-btn" title="Follow Sanjay Bundela on Instagram">
                                 <i class='bx bxl-instagram'></i> @sanjaybundela_06
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jugal Kishor Tiwari -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="team-leadership-card">
+                        <div class="leadership-photo-wrap">
+                            <img src="{{ asset('images/jugal_kishor_tiwari.avif') }}" alt="Jugal Kishor Tiwari - Executive Producer">
+                        </div>
+                        <span class="leadership-badge">Executive Producer</span>
+                        <h3 class="leadership-name">Jugal Kishor Tiwari</h3>
+                        <span class="leadership-title">Executive Producer &amp; Operations</span>
+                        <div class="leadership-pills">
+                            <span class="leadership-pill">Production Control</span>
+                            <span class="leadership-pill">Resource Planning</span>
+                            <span class="leadership-pill">Project Execution</span>
+                        </div>
+                        <p class="leadership-bio">"Ensuring creative visions translate seamlessly onto screen through rigorous production planning, strategic coordination, and operational excellence."</p>
+                        <div class="text-center mt-auto">
+                            <a href="https://www.instagram.com/jugaltiwari24/" target="_blank" class="leadership-insta-btn" title="Follow Jugal Kishor Tiwari on Instagram">
+                                <i class='bx bxl-instagram'></i> @jugaltiwari24
                             </a>
                         </div>
                     </div>

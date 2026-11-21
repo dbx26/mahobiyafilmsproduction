@@ -19,15 +19,15 @@ class ExampleTest extends TestCase
         }
 
         $aboutResponse = $this->get('/about');
-        $aboutResponse->assertSee('about-hero-banner');
-        $aboutResponse->assertSee('hero-breadcrumb');
+        $aboutResponse->assertSee('page-title-area');
+        $aboutResponse->assertSee('page-title-item');
         $aboutResponse->assertSee('trust-area');
         $aboutResponse->assertSee('service-area-two');
         $aboutResponse->assertSee('product-area-two');
         $aboutResponse->assertSee('work-area');
         $aboutResponse->assertSee('team-area-three');
-        $aboutResponse->assertSee('About Mahobiya Films Production');
-        $aboutResponse->assertSee('Stories Rooted in Heritage, Crafted for the World.');
+        $aboutResponse->assertSee('About Us');
+        $aboutResponse->assertSee('Stories Rooted in Heritage, Crafted for the World');
         $aboutResponse->assertSee('A Vision for Meaningful Cinema');
         $aboutResponse->assertSee('Our Vision');
         $aboutResponse->assertSee('Our Mission');
@@ -47,6 +47,8 @@ class ExampleTest extends TestCase
         $filmsResponse->assertSee('Explore Film Details');
         $filmsResponse->assertSee('work-area-two');
         $filmsResponse->assertSee('film-card-horizontal');
+        $filmsResponse->assertSee('Ravidas Ek Vichar');
+        $filmsResponse->assertSee('ravidas_ek_vichar.avif');
 
         $filmDetailResponse = $this->get('/films/mahakavya-shri-ramayan-katha');
         $filmDetailResponse->assertStatus(200);
@@ -95,6 +97,8 @@ class ExampleTest extends TestCase
         $teamResponse->assertSee('team-leadership-card');
         $teamResponse->assertSee('Prakash Mahobiya');
         $teamResponse->assertSee('Sanjay Bundela');
+        $teamResponse->assertSee('Jugal Kishor Tiwari');
+        $teamResponse->assertSee('Executive Producer');
         $teamResponse->assertSee('Executive Studio Leadership');
         $teamResponse->assertSee('team-divisions-section');
         $teamResponse->assertSee('division-card');

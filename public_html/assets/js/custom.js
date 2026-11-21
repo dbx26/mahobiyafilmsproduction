@@ -72,6 +72,17 @@ jQuery(function ($) {
 		fixedContentPos: false,
 	});
 
+	// Popup Image JS
+	$('.popup-image').magnificPopup({
+		type: 'image',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		closeOnContentClick: true,
+		image: {
+			verticalFit: true
+		}
+	});
+
 	// Accordion JS
 	$('.accordion > li:eq(0) a').addClass('active').next().slideDown();
 	$('.accordion a').on('click', function(j) {
