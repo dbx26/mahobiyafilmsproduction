@@ -44,8 +44,27 @@
     font-size: 14px;
     padding: 8px 10px 10px;
   }
+  .mobile-nav {
+    height: 72px;
+  }
   .mobile-nav .logo {
-    max-width: 90px;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: calc(100% - 75px) !important;
+    display: flex !important;
+    align-items: center !important;
+    z-index: 1000 !important;
+  }
+  .mobile-nav .logo .mobile-logo-img {
+    height: 48px !important;
+    max-height: 48px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) brightness(1.08) !important;
   }
   .mobile-nav.mean-container .mean-nav ul li a.active {
     color: #c1ab65;
@@ -58,10 +77,46 @@
     height: 350px;
     overflow-y: scroll;
   }
+  .mean-container .mean-bar {
+    height: 72px !important;
+    min-height: 72px !important;
+    background-color: #080808 !important;
+    border-bottom: 1px solid rgba(193, 171, 101, 0.28) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7) !important;
+    padding: 0 !important;
+  }
+  .mean-container a.meanmenu-reveal {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 20px !important;
+    padding: 7px 8px !important;
+    width: 38px !important;
+    height: 36px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 4px !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(193, 171, 101, 0.35) !important;
+    background: rgba(193, 171, 101, 0.1) !important;
+    box-sizing: border-box !important;
+  }
   .mean-container a.meanmenu-reveal span {
-    position: relative;
-    top: 8px;
-    margin-top: -6px;
+    display: block !important;
+    height: 2px !important;
+    width: 20px !important;
+    background-color: #c1ab65 !important;
+    border-radius: 2px !important;
+    position: static !important;
+    top: 0 !important;
+    margin: 0 !important;
+  }
+  .mean-container .mean-nav {
+    margin-top: 72px !important;
+    background-color: #0c0c0c !important;
+    border-bottom: 2px solid #c1ab65 !important;
   }
   /*-- End Navbar --*/
   /*-- Banner --*/
@@ -203,10 +258,18 @@
   /*----- End Home One CSS -----*/
   /*----- Back to Top CSS ------*/
   #toTop {
-    bottom: 70px;
+    bottom: 16px !important;
+    right: 0 !important;
+    z-index: 99 !important;
   }
   .back-to-top-btn i {
-    margin-right: 20px;
+    height: 38px !important;
+    width: 38px !important;
+    line-height: 38px !important;
+    font-size: 20px !important;
+    margin-right: 14px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+    opacity: 0.85 !important;
   }
   /*----- End Back to Top CSS -----*/
   /*----- Home Two CSS -----*/
@@ -480,8 +543,26 @@
     font-size: 14px;
     padding: 8px 10px 10px;
   }
+  .mobile-nav {
+    height: 72px;
+  }
   .mobile-nav .logo {
-    max-width: 90px;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 140px;
+    display: flex !important;
+    align-items: center !important;
+    z-index: 1000 !important;
+  }
+  .mobile-nav .logo .mobile-logo-img {
+    height: 48px !important;
+    max-height: 48px !important;
+    width: auto !important;
+    object-fit: contain !important;
   }
   .mobile-nav.mean-container .mean-nav ul li a.active {
     color: #c1ab65;
@@ -494,10 +575,46 @@
     height: 350px;
     overflow-y: scroll;
   }
+  .mean-container .mean-bar {
+    height: 72px !important;
+    min-height: 72px !important;
+    background-color: #080808 !important;
+    border-bottom: 1px solid rgba(193, 171, 101, 0.28) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7) !important;
+    padding: 0 !important;
+  }
+  .mean-container a.meanmenu-reveal {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 20px !important;
+    padding: 7px 8px !important;
+    width: 38px !important;
+    height: 36px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 4px !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(193, 171, 101, 0.35) !important;
+    background: rgba(193, 171, 101, 0.1) !important;
+    box-sizing: border-box !important;
+  }
   .mean-container a.meanmenu-reveal span {
-    position: relative;
-    top: 8px;
-    margin-top: -6px;
+    display: block !important;
+    height: 2px !important;
+    width: 20px !important;
+    background-color: #c1ab65 !important;
+    border-radius: 2px !important;
+    position: static !important;
+    top: 0 !important;
+    margin: 0 !important;
+  }
+  .mean-container .mean-nav {
+    margin-top: 72px !important;
+    background-color: #0c0c0c !important;
+    border-bottom: 2px solid #c1ab65 !important;
   }
   /*-- End Navbar --*/
   /*-- Banner --*/
@@ -1863,13 +1980,165 @@ html, body {
 
 /* ==========================================================================
    Home Page Multi-Screen Responsiveness (Moovi Architecture)
+   Universal Cross-Device Responsive Framework
    ========================================================================== */
-@media only screen and (max-width: 991px) {
+
+/* Base Viewport & Overflow Safety */
+html, body {
+  overflow-x: hidden;
+}
+.banner-wrap {
+  overflow-x: hidden;
+}
+
+/* 1. Large Desktops & Laptops (992px to 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-wrap {
+    margin-top: 96px;
+  }
+  .banner-area {
+    height: 760px;
+    min-height: 72vh;
+  }
+  .banner-content h1 {
+    font-size: 42px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 14px;
+  }
+  .banner-content p {
+    font-size: 15.5px !important;
+  }
   .home-cta-box {
-    padding: 40px 25px;
+    padding: 42px 35px;
   }
   .home-cta-box h2 {
     font-size: 30px;
+  }
+}
+
+/* 2. Tablets in Portrait & Landscape (768px to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .mean-container .mean-bar {
+    height: 75px !important;
+    min-height: 75px !important;
+    background-color: #080808 !important;
+    border-bottom: 1px solid rgba(193, 171, 101, 0.28) !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.75) !important;
+    padding: 0 !important;
+    position: relative !important;
+  }
+  .mobile-nav {
+    height: 75px !important;
+    background-color: #080808 !important;
+  }
+  .mobile-nav .logo {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 150px !important;
+    display: flex !important;
+    align-items: center !important;
+    z-index: 1000 !important;
+  }
+  .mobile-nav .logo .mobile-logo-img {
+    height: 52px !important;
+    max-height: 52px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) brightness(1.08) !important;
+  }
+  .mean-container a.meanmenu-reveal {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 20px !important;
+    padding: 8px 7px !important;
+    width: 40px !important;
+    height: 38px !important;
+    display: block !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(193, 171, 101, 0.4) !important;
+    background: rgba(193, 171, 101, 0.1) !important;
+    box-sizing: border-box !important;
+  }
+  .mean-container a.meanmenu-reveal span {
+    display: block !important;
+    height: 2.5px !important;
+    width: 22px !important;
+    background-color: #c1ab65 !important;
+    border-radius: 2px !important;
+    margin: 3.5px auto !important;
+    position: static !important;
+    top: 0 !important;
+  }
+  .mean-container .mean-nav {
+    margin-top: 75px !important;
+  }
+  .banner-wrap {
+    margin-top: 75px;
+  }
+  .banner-area {
+    height: auto;
+    min-height: 640px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .banner-area:before {
+    background: linear-gradient(90deg, rgba(8, 8, 8, 0.94) 0%, rgba(8, 8, 8, 0.88) 50%, rgba(8, 8, 8, 0.6) 100%) !important;
+  }
+  .banner-content {
+    max-width: 650px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  .banner-content h1 {
+    font-size: 38px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 14px;
+  }
+  .banner-content .banner-quote {
+    font-size: 17px !important;
+    margin-bottom: 12px;
+  }
+  .banner-content p {
+    font-size: 15.5px !important;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+  .banner-content .banner-btn-group {
+    justify-content: center !important;
+    gap: 12px;
+  }
+  .banner-social {
+    display: none !important;
+  }
+  .film-spotlight-body {
+    padding: 26px 20px;
+    text-align: center;
+  }
+  .spotlight-actions {
+    justify-content: center !important;
+    margin-top: 15px;
+  }
+  .home-cta-box {
+    padding: 38px 30px;
+  }
+  .home-cta-box h2 {
+    font-size: 28px;
+  }
+  .home-cta-actions {
+    justify-content: center !important;
+    margin-top: 15px;
+  }
+}
+
+/* 3. Small Tablets & Desktops below 991px */
+@media only screen and (max-width: 991px) {
+  .home-cta-box {
+    padding: 40px 25px;
   }
   .journey-card {
     padding: 28px 20px;
@@ -1890,89 +2159,493 @@ html, body {
   }
 }
 
+/* 4. All Mobile Screens (max-width: 767px) */
 @media only screen and (max-width: 767px) {
+  /* Mobile Header Bar & Logo */
+  .mean-container .mean-bar {
+    height: 75px !important;
+    min-height: 75px !important;
+    background-color: #080808 !important;
+    border-bottom: 1px solid rgba(193, 171, 101, 0.28) !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.75) !important;
+    padding: 0 !important;
+    position: relative !important;
+  }
+  .mobile-nav {
+    height: 75px !important;
+    background-color: #080808 !important;
+  }
+  .mobile-nav .logo {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: 18px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: calc(100% - 75px) !important;
+    display: flex !important;
+    align-items: center !important;
+    z-index: 1000 !important;
+    line-height: 1 !important;
+  }
+  .mobile-nav .logo .mobile-logo-img {
+    height: 48px !important;
+    max-height: 48px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7)) brightness(1.08) !important;
+  }
+  .mean-container a.meanmenu-reveal {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 18px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 42px !important;
+    height: 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 5px !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(193, 171, 101, 0.45) !important;
+    background: rgba(193, 171, 101, 0.12) !important;
+    box-sizing: border-box !important;
+    text-indent: 0 !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    z-index: 1001 !important;
+  }
+  .mean-container a.meanmenu-reveal span {
+    display: block !important;
+    height: 2.5px !important;
+    width: 22px !important;
+    background-color: #c1ab65 !important;
+    border-radius: 2px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    transform: none !important;
+    top: auto !important;
+    flex-shrink: 0 !important;
+  }
+  .mean-container a.meanmenu-reveal.meanclose {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: #c1ab65 !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    font-family: "Josefin Sans", sans-serif !important;
+    line-height: 40px !important;
+    text-align: center !important;
+    text-indent: 0 !important;
+  }
+  .mean-container .mean-nav {
+    margin-top: 75px !important;
+    background-color: #0c0c0c !important;
+    border-bottom: 2px solid #c1ab65 !important;
+  }
+
+  /* Real Movie Posters as Full Background on Mobile */
+  .banner-wrap {
+    margin-top: 75px !important;
+  }
+  .banner-area.banner-img-one {
+    background-image: url("../../images/about_banner.avif"), url("/images/about_banner.avif") !important;
+    background-size: cover !important;
+    background-position: 45% center !important;
+  }
+  .banner-area.banner-img-two {
+    background-image: url("../../images/poster_ramayan.jpg"), url("/images/poster_ramayan.jpg") !important;
+    background-size: cover !important;
+    background-position: top center !important;
+  }
+  .banner-area.banner-img-three {
+    background-image: url("../../images/ravidas_ek_vichar.avif"), url("/images/ravidas_ek_vichar.avif") !important;
+    background-size: cover !important;
+    background-position: top center !important;
+  }
+
+  /* Cinematic Gradient Overlay: Poster Artwork Visible on Top, Dark Gradient at Bottom */
+  .banner-area {
+    height: auto !important;
+    min-height: calc(100vh - 75px) !important;
+    max-height: 850px !important;
+    padding: 0 !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+  }
+  .banner-area:before {
+    position: absolute !important;
+    content: "" !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    background: linear-gradient(180deg, rgba(8, 8, 8, 0.1) 0%, rgba(8, 8, 8, 0.15) 35%, rgba(8, 8, 8, 0.72) 65%, rgba(8, 8, 8, 0.94) 88%, #080808 100%) !important;
+    z-index: 1 !important;
+  }
+
+  /* Position Text & Buttons at the Bottom, Right Above the Slider Dots */
+  .banner-area .d-table {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    height: 100% !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+  .banner-area .d-table-cell {
+    display: block !important;
+    vertical-align: bottom !important;
+    width: 100% !important;
+    padding-top: 100px !important;
+    padding-bottom: 48px !important; /* Positions buttons just upside of the carousel dots */
+  }
+
+  .banner-content {
+    text-align: center !important;
+    margin: 0 auto !important;
+    padding: 0 16px !important;
+    max-width: 100% !important;
+  }
+  .banner-content .sub-title {
+    font-size: 10.5px !important;
+    letter-spacing: 1.5px !important;
+    padding: 4px 12px !important;
+    margin-bottom: 8px !important;
+    display: inline-block !important;
+  }
+  .banner-content h1 {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 8px !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+  }
+  .banner-content .banner-quote {
+    font-size: 14.5px !important;
+    margin-bottom: 10px !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.95) !important;
+    color: #e5d79e !important;
+  }
+  /* Hide verbose descriptive body paragraph on mobile so artwork remains prominent and buttons sit at the bottom */
+  .banner-content p:not(.banner-quote) {
+    display: none !important;
+  }
+  .banner-content .banner-btn-group {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 8px !important;
+    margin-top: 10px !important;
+  }
+  .banner-content .banner-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 11px 20px !important;
+    font-size: 14px !important;
+  }
+
+  /* Slider Dots positioned cleanly at the very bottom */
+  .banner-slider.owl-theme .owl-nav.disabled + .owl-dots {
+    bottom: 12px !important;
+    z-index: 3 !important;
+  }
+  .banner-social {
+    display: none !important;
+  }
+
+  /* Section 2: Hallmark Cards */
   .trust-hallmark-card {
     padding: 20px 14px;
+    text-align: center;
   }
   .trust-hallmark-card i {
-    font-size: 28px;
+    font-size: 30px;
     margin-bottom: 8px;
   }
   .trust-hallmark-card h4 {
-    font-size: 14.5px;
+    font-size: 15px;
   }
   .trust-hallmark-card p {
-    font-size: 12.5px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* Section 3: Upcoming Film Slate */
+  .upcoming-film-poster-wrap {
+    max-width: 260px;
+    margin: 0 auto 24px;
+  }
+  .upcoming-film-content {
+    text-align: center !important;
+    padding-left: 0 !important;
+  }
+  .upcoming-genre-tag {
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  .upcoming-film-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .upcoming-tagline {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .upcoming-film-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .upcoming-film-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .upcoming-film-meta span {
+    font-size: 13px;
+    margin: 0;
   }
   .upcoming-film-actions {
+    width: 100%;
     justify-content: center;
   }
   .upcoming-film-actions .banner-btn {
     width: 100%;
-    margin-right: 0 !important;
-    margin-bottom: 8px;
-    text-align: center;
     justify-content: center;
+    margin: 0 !important;
+  }
+
+  /* Section 4: Featured Film Spotlight */
+  .film-spotlight-card {
+    margin-bottom: 20px;
   }
   .film-spotlight-body {
-    padding: 20px 16px;
+    padding: 22px 16px;
     text-align: center;
   }
+  .spotlight-meta-bar {
+    justify-content: center !important;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    margin-bottom: 12px;
+  }
   .spotlight-title {
-    font-size: 20px;
+    font-size: 21px;
+    margin-bottom: 10px;
   }
   .spotlight-desc {
     font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
   }
   .spotlight-actions {
     width: 100%;
-    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
   }
   .spotlight-actions .banner-btn {
     width: 100%;
-    margin-right: 0 !important;
-    margin-bottom: 8px;
+    margin: 0 !important;
     justify-content: center;
   }
+
+  /* Section 5: Our Journey */
   .journey-card {
-    padding: 26px 18px;
+    padding: 24px 18px;
+    margin-bottom: 20px;
+    text-align: center;
   }
   .journey-card h3 {
-    font-size: 19px;
+    font-size: 18px;
   }
   .journey-card p {
-    font-size: 14.5px;
+    font-size: 14px;
+    line-height: 1.6;
   }
-  .home-cta-box {
-    padding: 32px 18px;
-  }
-  .home-cta-box h2 {
-    font-size: 23px;
-    line-height: 1.35;
-  }
-  .home-cta-box p {
-    font-size: 14.5px;
-    margin-bottom: 20px;
-  }
-  .home-cta-actions .banner-btn {
-    width: 100%;
-    margin-right: 0 !important;
-    margin-bottom: 8px;
-    justify-content: center;
-  }
-  .home-blog-thumb {
-    height: 185px;
-  }
-}
 
-@media only screen and (max-width: 480px) {
-  .trust-hallmark-row .col-6 {
-    width: 100%;
+  /* Section 6: Our Expertise */
+  .service-area {
+    background-color: #0c0c0c !important;
   }
-  .home-video-meta h4 {
-    font-size: 15.5px;
+  .service-area .service-item {
+    background: rgba(20, 22, 28, 0.9) !important;
+    border: 1px solid rgba(193, 171, 101, 0.25) !important;
+    border-radius: 8px !important;
+    padding: 28px 20px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5) !important;
+  }
+  .service-area .service-item i {
+    position: static !important;
+    display: inline-block !important;
+    font-size: 36px !important;
+    color: #c1ab65 !important;
+    margin-bottom: 12px !important;
+  }
+  .service-area .service-item .service-inner {
+    padding-left: 0 !important;
+  }
+  .service-area .service-item .service-inner h3 {
+    color: #ffffff !important;
+    font-size: 19px !important;
+    margin-bottom: 10px !important;
+  }
+  .service-area .service-item .service-inner p {
+    color: #c4c6cb !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Section 7: Watch Screening Room */
+  .home-video-card {
+    margin-bottom: 22px;
   }
   .home-video-card .week-item {
     aspect-ratio: 16 / 9;
+    border-radius: 8px;
+  }
+  .home-video-meta h4 {
+    font-size: 15px;
+    margin-top: 6px;
+  }
+
+  /* Section 8: Leadership */
+  .team-leadership-card {
+    padding: 28px 18px;
+    margin-bottom: 24px;
+  }
+  .leadership-photo-wrap {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 16px;
+  }
+  .leadership-name {
+    font-size: 21px;
+  }
+  .leadership-bio {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  .leadership-insta-btn {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  /* Section 9: Press Room */
+  .home-blog-thumb {
+    height: 195px;
+  }
+  .blog-bottom {
+    padding: 20px 16px;
+  }
+  .blog-bottom h3 {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+  .blog-bottom p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Section 10: Complete Row CTA */
+  .home-cta-box {
+    padding: 30px 18px;
+    text-align: center;
+  }
+  .home-cta-box h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .home-cta-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .home-cta-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .home-cta-actions .banner-btn {
+    width: 100%;
+    margin: 0 !important;
+    justify-content: center;
+  }
+}
+
+/* 5. Compact Smartphones (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+  .mobile-nav .logo .mobile-logo-img {
+    height: 42px !important;
+    max-height: 42px !important;
+  }
+  .trust-hallmark-row .col-6 {
+    width: 100%;
+  }
+  .banner-content h1 {
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+  }
+  .banner-content .sub-title {
+    font-size: 10px !important;
+    letter-spacing: 1px !important;
+  }
+  .section-title h2 {
+    font-size: 22px !important;
+  }
+  .section-title .sub-title {
+    font-size: 12px !important;
+  }
+  .home-cta-box h2 {
+    font-size: 19px !important;
+  }
+  .leadership-photo-wrap {
+    width: 155px;
+    height: 155px;
+  }
+  .upcoming-film-poster-wrap {
+    max-width: 210px;
+  }
+  .spotlight-title {
+    font-size: 18px;
+  }
+  .home-video-meta h4 {
+    font-size: 14.5px;
+  }
+}
+
+/* 6. Ultra-Small Handhelds (max-width: 360px) */
+@media only screen and (max-width: 360px) {
+  .mobile-nav .logo .mobile-logo-img {
+    height: 36px !important;
+    max-height: 36px !important;
+  }
+  .banner-content h1 {
+    font-size: 21px !important;
+  }
+  .banner-btn {
+    font-size: 13px !important;
+    padding: 10px 16px !important;
+  }
+  .home-cta-box {
+    padding: 24px 14px;
+  }
+  .home-cta-box h2 {
+    font-size: 18px !important;
   }
 }/*# sourceMappingURL=responsive.css.map */
