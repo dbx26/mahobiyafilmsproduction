@@ -7,51 +7,75 @@
     <!-- Section 1 – Main Hero Banner Slider -->
     <div class="banner-wrap">
         <div class="banner-slider owl-theme owl-carousel">
-            <!-- Slide 1: Studio Identity -->
+            <!-- Slide 1: Ravidas Ek Vichar -->
+            <div class="banner-area banner-img-three">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7 col-md-10 text-start">
+                                    <div class="banner-content text-start">
+                                        <span class="sub-title">A PERIOD DRAMA FILM &middot; COMING SOON</span>
+                                        <h1>Ravidas Ek Vichar</h1>
+                                        <p class="banner-quote">&ldquo;संत रविदास का जीवन, दर्शन और समता का संदेश...&rdquo;</p>
+                                        <p>A landmark biographical period drama celebrating the transformative life, profound spiritual philosophy, and eternal message of universal equality.</p>
+                                        {{-- <div class="banner-btn-group justify-content-start">
+                                            <a class="banner-btn btn-gold" href="{{ route('films') }}">Explore Upcoming Slate</a>
+                                            <a class="banner-btn btn-outline" href="{{ route('news') }}">Read Announcement</a>
+                                        </div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Mahakavya Shri Ramayan Katha -->
+            <div class="banner-area banner-img-two">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7 col-md-10 text-start">
+                                    <div class="banner-content text-start">
+                                        {{-- <span class="sub-title">FEATURED THEATRICAL CINEMA &middot; IN CINEMAS 25 SEPT 2026</span> --}}
+                                        <h1>Mahakavya Shri Ramayan Katha</h1>
+                                        <p class="banner-quote">&ldquo;श्री राम की मर्यादा, पराक्रम और भक्ति की अमर गाथा...&rdquo;</p>
+                                        <p>An epic mythological theatrical experience presenting the timeless journey of Shri Ram, released simultaneously in Hindi and Chhattisgarhi language editions across cinemas nationwide.</p>
+                                        {{-- <div class="banner-btn-group justify-content-start">
+                                            <a class="banner-btn btn-gold" href="{{ route('film.detail', 'mahakavya-shri-ramayan-katha') }}">Explore Film Details</a>
+                                            <a class="banner-btn btn-outline popup-youtube" href="https://www.youtube.com/watch?v=lUhw32rt_dE">
+                                                <i class='bx bx-play-circle'></i> Watch Official Trailer
+                                            </a>
+                                        </div> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Studio Identity -->
             <div class="banner-area banner-img-one">
                 <div class="d-table">
                     <div class="d-table-cell">
-                        <div class="banner-content">
-                            <span class="sub-title">MAHOBIYA FILMS PRODUCTION</span>
-                            <h1>Stories Rooted in Heritage, Crafted for the World.</h1>
-                            <p>Bringing powerful stories to life through cinema, culture and creativity. From meaningful regional storytelling to large-scale cinematic experiences, we create films that connect with audiences across generations.</p>
-                            <a class="banner-btn me-2" href="{{ route('films') }}">Explore Our Films</a>
-                            <a class="banner-btn popup-youtube" href="https://www.youtube.com/watch?v=lUhw32rt_dE">
-                                <i class='bx bx-play-circle'></i> Watch Trailer
-                            </a>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7 col-md-10 text-start">
+                                    <div class="banner-content text-start">
+                                        <span class="sub-title">MAHOBIYA FILMS PRODUCTION</span>
+                                        <h1>Stories Rooted in Heritage, Crafted for the World</h1>
+                                        <p>From grand cultural epics to inspiring regional narratives, bridging Indian heritage with world-class cinematic excellence for audiences across generations.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Slide 2: Featured Theatrical Release -->
-            <div class="banner-area banner-img-two banner-img-ramayan">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="banner-content">
-                            <span class="sub-title">FEATURED THEATRICAL RELEASE</span>
-                            <h1>Mahakavya Shri Ramayan Katha</h1>
-                            <p>A grand mythological cinematic experience presenting the timeless journey of Shri Ram, released simultaneously across Hindi and Chhattisgarhi language editions.</p>
-                            <a class="banner-btn me-2" href="{{ route('film.detail', 'mahakavya-shri-ramayan-katha') }}">Explore Film Details</a>
-                            <a class="banner-btn popup-youtube" href="https://www.youtube.com/watch?v=lUhw32rt_dE">
-                                <i class='bx bx-play-circle'></i> Watch Trailer
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 3: Upcoming Period Drama -->
-            <div class="banner-area banner-img-three banner-img-ravidas">
-                <div class="d-table">
-                    <div class="d-table-cell">
-                        <div class="banner-content">
-                            <span class="sub-title">UPCOMING PERIOD DRAMA &middot; IN CINEMAS</span>
-                            <h1>Ravidas Ek Vichar</h1>
-                            <p>"संत रविदास का जीवन, दर्शन और समता का संदेश..." A landmark biographical period drama celebrating the transformative life, profound spiritual philosophy, and eternal message of universal equality.</p>
-                            <a class="banner-btn me-2" href="{{ route('films') }}">Explore Upcoming Slate</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
         <div class="banner-social">
             <span>Follow us on:</span>
@@ -141,13 +165,12 @@
                 <h2>Upcoming Theatrical Slate</h2>
                 <p>We are continuously exploring new stories and creative opportunities to bring fresh, transformative cinematic experiences to audiences.</p>
             </div>
-            <div class="row justify-content-center align-items-center mt-5">
+            <div class="row justify-content-center align-items-center upcoming-film-row mt-4 mt-lg-5">
                 <div class="col-lg-4 col-md-5 mb-4 mb-md-0 text-center">
                     <div class="upcoming-film-poster-wrap">
                         <a href="{{ asset('images/ravidas_ek_vichar.avif') }}" class="popup-image d-block" title="Ravidas Ek Vichar - First Look Poster">
                             <img src="{{ asset('images/ravidas_ek_vichar.avif') }}" alt="Ravidas Ek Vichar - A Period Drama Film">
-                            <span class="upcoming-badge">Coming Soon In Cinemas</span>
-                            <span class="upcoming-poster-zoom"><i class='bx bx-zoom-in'></i> Click to Expand</span>
+                            {{-- <span class="upcoming-badge">Coming Soon In Cinemas</span> --}}
                         </a>
                     </div>
                 </div>
@@ -163,7 +186,7 @@
                             <span><i class='bx bx-map-pin'></i> Nationwide Release</span>
                         </div>
                         <div class="upcoming-film-actions mt-4">
-                            <a class="banner-btn me-2" href="{{ route('films') }}">Explore Upcoming Slate</a>
+                            <a class="banner-btn btn-gold me-2" href="{{ route('films') }}">Explore Upcoming Slate</a>
                         </div>
                     </div>
                 </div>
@@ -184,7 +207,10 @@
                     <div class="film-spotlight-card">
                         <div class="film-spotlight-media">
                             <a href="{{ route('film.detail', 'mahakavya-shri-ramayan-katha') }}">
-                                <img src="{{ asset('images/banner_ramayan.jpg') }}" alt="Mahakavya Shri Ramayan Katha - Theatrical Feature Film">
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="{{ asset('images/poster_ramayan.jpg') }}">
+                                    <img src="{{ asset('images/banner_ramayan.jpg') }}" alt="Mahakavya Shri Ramayan Katha - Theatrical Feature Film">
+                                </picture>
                                 <span class="spotlight-play-overlay">
                                     <i class='bx bx-play-circle'></i>
                                 </span>
@@ -267,7 +293,7 @@
     <!-- End Our Journey -->
 
     <!-- Section 6 – What We Do (Our Expertise) -->
-    <section class="service-area service-area-two pt-100 pb-70">
+    <section class="service-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
                 <span class="sub-title">OUR EXPERTISE</span>
@@ -403,11 +429,6 @@
                         <span class="leadership-badge">Founder &amp; Managing Director</span>
                         <h3 class="leadership-name">Prakash Mahobiya</h3>
                         <span class="leadership-title">Managing Director &amp; Key Principal</span>
-                        <div class="leadership-pills">
-                            <span class="leadership-pill">Studio Vision</span>
-                            <span class="leadership-pill">Creative Direction</span>
-                            <span class="leadership-pill">Theatrical Scale</span>
-                        </div>
                         <p class="leadership-bio">"Committed to pioneering cinema that honors our civilizational heritage while establishing benchmark production standards for audiences across India and beyond."</p>
                         <div class="leadership-social-row">
                             <a href="https://www.instagram.com/prakashmahobiya/" target="_blank" class="leadership-insta-btn" title="Follow Prakash Mahobiya on Instagram">
@@ -426,11 +447,6 @@
                         <span class="leadership-badge">Co-Founder &amp; Producer</span>
                         <h3 class="leadership-name">Sanjay Bundela</h3>
                         <span class="leadership-title">Studio Co-Founder &amp; Producer</span>
-                        <div class="leadership-pills">
-                            <span class="leadership-pill">Executive Production</span>
-                            <span class="leadership-pill">Line Operations</span>
-                            <span class="leadership-pill">Music Label (M Series)</span>
-                        </div>
                         <p class="leadership-bio">"Dedicated to robust production execution, nurturing creative talent, and building sustainable regional cinema with global digital distribution."</p>
                         <div class="leadership-social-row">
                             <a href="https://www.instagram.com/sanjaybundela_06/" target="_blank" class="leadership-insta-btn" title="Follow Sanjay Bundela on Instagram">
@@ -526,19 +542,25 @@
     <!-- End Latest News & Updates -->
 
     <!-- Section 10 – Contact / CTA -->
-    <section class="trust-area home-cta-section ptb-100 text-center">
+    <section class="trust-area home-cta-section ptb-100">
         <div class="container">
             <div class="home-cta-box">
-                <span class="sub-title">CONNECT WITH MAHOBIYA FILMS</span>
-                <h2>Have a Story to Tell? Let's Create Together.</h2>
-                <p>We are always open to creative ideas, talented writers, artists, and meaningful production collaborations in cinema and digital entertainment.</p>
-                <div class="home-cta-actions mt-4">
-                    <a class="banner-btn me-2" href="{{ route('contact') }}">
-                        Get In Touch <i class='bx bx-paper-plane'></i>
-                    </a>
-                    <a class="banner-btn" href="{{ route('about') }}">
-                        Learn More About Us <i class='bx bx-info-circle'></i>
-                    </a>
+                <div class="row align-items-center">
+                    <div class="col-lg-8 text-lg-start text-center mb-4 mb-lg-0">
+                        <span class="sub-title">CONNECT WITH MAHOBIYA FILMS</span>
+                        <h2>Have a Story to Tell? Let's Create Together.</h2>
+                        <p class="mb-0">We are always open to creative ideas, talented writers, artists, and meaningful production collaborations in cinema and digital entertainment.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end text-center">
+                        <div class="home-cta-actions justify-content-lg-end justify-content-center">
+                            <a class="banner-btn me-2 mb-2" href="{{ route('contact') }}">
+                                Get In Touch <i class='bx bx-paper-plane'></i>
+                            </a>
+                            <a class="banner-btn mb-2" href="{{ route('about') }}">
+                                Learn More About Us <i class='bx bx-info-circle'></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -34,7 +34,7 @@
         <title>@yield('title', 'Mahobiya Films Production - Stories Rooted in Heritage, Crafted for the World')</title>
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
+        <link rel="icon" type="image/png" href="{{ asset('images/logo_icon.png') }}?v={{ @filemtime(public_path('images/logo_icon.png')) ?: 3 }}">
     </head>
     <body>
         <!-- Preloader -->
@@ -55,7 +55,7 @@
             <!-- Menu For Mobile Device -->
             <div class="mobile-nav">
                 <a href="{{ route('home') }}" class="logo">
-                    <img src="{{ asset('images/logo.png') }}?v={{ @filemtime(public_path('images/logo.png')) ?: 2 }}" alt="Mahobiya Films Production" class="mobile-logo-img">
+                    <img src="{{ asset('images/logo_header.png') }}?v={{ @filemtime(public_path('images/logo_header.png')) ?: 3 }}" alt="Mahobiya Films Production" class="mobile-logo-img">
                 </a>
             </div>
 
@@ -64,7 +64,7 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
-                            <img src="{{ asset('images/logo.png') }}?v={{ @filemtime(public_path('images/logo.png')) ?: 2 }}" alt="Mahobiya Films Production" class="header-logo-img">
+                            <img src="{{ asset('images/logo_header.png') }}?v={{ @filemtime(public_path('images/logo_header.png')) ?: 3 }}" alt="Mahobiya Films Production" class="header-logo-img">
                         </a>
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto align-items-center">
@@ -154,7 +154,7 @@
                         <div class="footer-item">
                             <div class="footer-logo">
                                 <a class="footer-logo-img" href="{{ route('home') }}">
-                                    <img src="{{ asset('images/logo.png') }}?v={{ @filemtime(public_path('images/logo.png')) ?: 2 }}" alt="Mahobiya Films" class="footer-logo-main-img">
+                                    <img src="{{ asset('images/logo_header.png') }}?v={{ @filemtime(public_path('images/logo_header.png')) ?: 3 }}" alt="Mahobiya Films" class="footer-logo-main-img">
                                 </a>
                                 <p>Mahobiya Films Production Private Limited — Motion picture, television, and OTT film studio based in Bhilai, Chhattisgarh. Stories rooted in heritage, crafted for the world.</p>
                                 <ul>

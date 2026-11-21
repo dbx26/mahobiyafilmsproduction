@@ -37,14 +37,13 @@ jQuery(function ($) {
 	$('.banner-slider').owlCarousel({
 		items: 1,
 		loop: true,
-		margin: 15,
+		margin: 0,
 		singleItem: true,
 		nav: false,
 		dots: true,
-		animateOut: 'fadeOut',
-		smartSpeed: 1000,
+		smartSpeed: 800,
 		autoplay: true,
-		autoplayTimeout: 4000,
+		autoplayTimeout: 5500,
 		autoplayHoverPause: true,
     });
 
