@@ -1,11 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700");
-body {
-    font-family: "Oswald", sans-serif;
-    padding: 0;
-    margin: 0;
-    font-size: 15px;
-    background-color: #f1f1f1;
-}
+/* MeanMenu CSS */
 
 a.meanmenu-reveal {
 	display: none;
@@ -69,12 +62,17 @@ a.meanmenu-reveal {
 	padding: 1em 5%;
 	margin: 0;
 	text-align: left;
-	color: #677294;
-	border-top: 1px solid #DBEEFD;
+	color: #ffffff;
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
 	text-decoration: none;
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
-.mean-container .mean-nav ul li a.active {
-	color: #000000;
+.mean-container .mean-nav ul li a.active,
+.mean-container .mean-nav ul li a:hover {
+	color: #c1ab65;
 }
 .mean-container .mean-nav ul li li a {
 	width: 80%;

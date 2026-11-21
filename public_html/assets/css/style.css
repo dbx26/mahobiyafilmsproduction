@@ -364,19 +364,19 @@ button:focus {
 /*-- End Navbar --*/
 /*-- Banner --*/
 .banner-img-one {
-  background-image: url("../../images/about_banner.avif"), url("/images/about_banner.avif");
+  background-image: url("../../images/about_banner.avif");
   background-size: cover;
   background-position: center center;
 }
 
 .banner-img-two {
-  background-image: url("../../images/banner_ramayan.jpg"), url("/images/banner_ramayan.jpg");
+  background-image: url("../../images/banner_ramayan.jpg");
   background-size: cover;
   background-position: center right;
 }
 
 .banner-img-three {
-  background-image: url("../../images/banner_ravidas.jpg"), url("/images/banner_ravidas.jpg");
+  background-image: url("../../images/banner_ravidas.jpg");
   background-size: cover;
   background-position: center right;
 }
@@ -1481,8 +1481,10 @@ footer .footer-item .footer-link ul li a {
   align-items: center;
   gap: 7px;
   color: #cdcccc;
-  font-family: "Playfair Display", serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   transition: 0.3s all ease;
 }
 footer .footer-item .footer-link ul li a::before {
@@ -4001,15 +4003,115 @@ footer .footer-item .footer-logo .footer-logo-img .footer-logo-main-img {
   font-size: 18px;
   vertical-align: middle;
 }
-@media only screen and (max-width: 767px) {
+/* Film Card — Tablet (768px–991px): side-by-side but tighter */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .film-card-horizontal .film-card-poster {
-    min-height: 320px;
+    min-height: 340px;
   }
   .film-card-horizontal .film-card-body {
-    padding: 25px 20px;
+    padding: 28px 24px;
   }
   .film-card-horizontal .film-card-body h3 {
-    font-size: 22px;
+    font-size: 24px;
+  }
+  .film-card-horizontal .film-genre {
+    font-size: 12px;
+    letter-spacing: 0.8px;
+  }
+  .film-card-horizontal .film-tagline-quote {
+    font-size: 15px;
+  }
+  .film-card-horizontal .film-synopsis {
+    font-size: 14.5px;
+  }
+  .film-card-btn,
+  .film-trailer-btn {
+    font-size: 13.5px;
+    padding: 10px 16px;
+  }
+}
+
+/* Film Card — Mobile (≤767px): poster stacks on top, body below */
+@media only screen and (max-width: 767px) {
+  .film-card-horizontal .film-card-poster {
+    min-height: unset;
+    max-height: unset;
+    height: auto;
+  }
+  .film-card-horizontal .film-card-poster img {
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    display: block;
+  }
+  .film-card-horizontal .film-card-body {
+    padding: 22px 18px 20px;
+  }
+  .film-card-horizontal .film-card-body h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .film-card-horizontal .film-genre {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    white-space: normal;
+    word-break: break-word;
+  }
+  .film-card-horizontal .film-tagline-quote {
+    font-size: 14.5px;
+    margin-bottom: 10px;
+  }
+  .film-card-horizontal .film-meta {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  .film-card-horizontal .film-synopsis {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+  .film-card-horizontal .film-action {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .film-card-btn,
+  .film-trailer-btn {
+    font-size: 13px;
+    padding: 11px 18px;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+  .film-card-horizontal .upcoming-project-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Film Card — Extra Small (≤480px): further compress */
+@media only screen and (max-width: 480px) {
+  .film-card-horizontal .film-card-poster {
+    min-height: unset;
+    height: auto;
+  }
+  .film-card-horizontal .film-card-body {
+    padding: 18px 14px 16px;
+  }
+  .film-card-horizontal .film-card-body h3 {
+    font-size: 18px;
+  }
+  .film-card-horizontal .film-genre {
+    font-size: 10.5px;
+  }
+  .film-card-horizontal .film-tagline-quote {
+    font-size: 13.5px;
+  }
+  .film-card-horizontal .film-synopsis {
+    font-size: 13.5px;
   }
 }
 
@@ -5901,57 +6003,79 @@ footer .footer-item .footer-logo .footer-logo-img .footer-logo-main-img {
 }
 
 /* ==========================================================================
-   Home Page Studio Enhancements (Moovi Theme Architecture & Precision UI/UX)
+   Home Page Studio Enhancements (Moovi Dark Cinema Theme Architecture & Precision UI/UX)
    ========================================================================== */
 
-/* Alternating Surface Architecture (Moovi Dark/Light Rhythm) */
+/* Moovi Dark Cinema Surface Architecture (#0c0c0c Core) */
 
-/* Section 2: Light Trust Area */
-.trust-area.trust-area-two {
-  background-color: #ffffff;
+/* Section 2: Trust Area (About Mahobiya Films) — Warm Off-White Surface */
+.trust-area {
+  background-color: #faf8f4;
 }
-.trust-area.trust-area-two .section-title h2 {
-  color: #080808;
+/* CTA section uses both trust-area + home-cta-section — keep it dark */
+.trust-area.home-cta-section {
+  background-color: #0c0c0c !important;
 }
-.trust-area.trust-area-two .trust-content p.lead-text {
+.trust-area .section-title .sub-title {
+  color: #c1ab65;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 2px;
+}
+.trust-area .section-title h2 {
+  color: #0d0d0d;
+  font-family: "Josefin Sans", sans-serif;
+}
+.trust-area.home-cta-section .section-title h2 {
+  color: #ffffff !important;
+}
+.trust-area .trust-content p.lead-text {
   color: #1a1a1a;
   font-weight: 500;
+  font-family: "Playfair Display", serif;
 }
-.trust-area.trust-area-two .trust-content p {
+.trust-area .trust-content p {
   color: #444444;
+  font-family: "Playfair Display", serif;
 }
-.trust-area.trust-area-two .trust-hallmark-card {
+.trust-area .trust-hallmark-card {
   background: #ffffff;
-  border: 1px solid #ebebeb;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(193, 171, 101, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  padding: 26px 18px;
+  transition: 0.35s all ease;
 }
-.trust-area.trust-area-two .trust-hallmark-card:hover {
+.trust-area .trust-hallmark-card:hover {
   background: #ffffff;
   border-color: #c1ab65;
-  box-shadow: 0 10px 25px rgba(193, 171, 101, 0.18);
+  box-shadow: 0 10px 28px rgba(193, 171, 101, 0.18);
   transform: translateY(-4px);
 }
-.trust-area.trust-area-two .trust-hallmark-card h4 {
-  color: #080808;
+.trust-area .trust-hallmark-card h4 {
+  color: #0d0d0d;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
-.trust-area.trust-area-two .trust-hallmark-card p {
-  color: #555555 !important;
+.trust-area .trust-hallmark-card p {
+  color: #555555;
+  font-family: "Playfair Display", serif;
+  font-size: 13.5px;
+  line-height: 1.6;
 }
-.trust-area.trust-area-two .banner-btn {
+.trust-area .banner-btn {
   background-color: #c1ab65;
   color: #080808;
-}
-.trust-area.trust-area-two .banner-btn:hover {
-  background-color: #080808;
-  color: #ffffff;
+  border-color: #c1ab65;
 }
 
-/* Section 4: Work Area Two Light Polish */
+/* Section 4: Work Area Two Polish */
 .work-area.work-area-two {
-  background-color: #fcfcfd;
+  background-color: #0c0c0c;
 }
 .work-area.work-area-two .section-title h2 {
-  color: #080808;
+  color: #ffffff;
 }
 
 /* Section 7: Video Area Screening Room Dark Polish */
@@ -5960,69 +6084,112 @@ footer .footer-item .footer-logo .footer-logo-img .footer-logo-main-img {
   position: relative;
 }
 
-/* Section 8: Team Area Two Light Polish */
-.team-area.team-area-two {
-  background-color: #ffffff;
+/* Section 8: Team Area (Our Leadership) — Light Surface with dark cinematic cards */
+.team-area {
+  background-color: #f5f4f0;
 }
-.team-area.team-area-two .section-title h2 {
-  color: #080808;
+.team-area .section-title .sub-title {
+  color: #c1ab65;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 2px;
 }
-.team-area.team-area-two .team-leadership-card {
-  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(193, 171, 101, 0.35);
-  border-top: 4px solid #c1ab65;
-  background: linear-gradient(180deg, #ffffff 0%, #faf8f3 100%);
-  padding: 38px 26px 32px;
+.team-area .section-title h2 {
+  color: #0d0d0d;
+  font-family: "Josefin Sans", sans-serif;
 }
-.team-area.team-area-two .team-leadership-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 55px rgba(193, 171, 101, 0.22);
-  border-color: #c1ab65;
+.team-area .section-title p {
+  color: #555555;
+  font-family: "Playfair Display", serif;
 }
-.team-area.team-area-two .banner-btn {
-  background-color: #c1ab65;
-  color: #080808;
-}
-.team-area.team-area-two .banner-btn:hover {
-  background-color: #080808;
-  color: #ffffff;
-}
-
-/* Section 9: Blog Area Two Light Polish */
-.blog-area.blog-area-two {
-  background-color: #f8f9fa;
-}
-.blog-area.blog-area-two .section-title h2 {
-  color: #080808;
-}
-.blog-area.blog-area-two .blog-item {
-  background-color: #ffffff;
-  border: 1px solid #ebebeb;
+.team-area .team-leadership-card {
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(193, 171, 101, 0.3);
+  border-top: 3px solid #c1ab65;
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  padding: 34px 24px 28px;
   transition: 0.35s all ease;
 }
-.blog-area.blog-area-two .blog-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
-  border-color: rgba(193, 171, 101, 0.4);
+.team-area .team-leadership-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(193, 171, 101, 0.22);
+  border-color: #c1ab65;
 }
-.blog-area.blog-area-two .blog-item .blog-bottom h3 a {
-  color: #080808;
+.team-area .team-leadership-card h3 {
+  color: #0d0d0d;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
-.blog-area.blog-area-two .blog-item .blog-bottom h3 a:hover {
+.team-area .team-leadership-card .leadership-role {
   color: #c1ab65;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-.blog-area.blog-area-two .blog-item .blog-bottom p {
+.team-area .team-leadership-card p {
   color: #555555;
+  font-family: "Playfair Display", serif;
+  font-size: 14.5px;
 }
-.blog-area.blog-area-two .banner-btn {
+.team-area .banner-btn {
   background-color: #c1ab65;
   color: #080808;
+  border-color: #c1ab65;
 }
-.blog-area.blog-area-two .banner-btn:hover {
-  background-color: #080808;
-  color: #ffffff;
+
+/* Section 9: Blog Area (Press Room & Latest News) — Light Surface */
+.blog-area {
+  background-color: #f8f7f3;
+}
+.blog-area .section-title .sub-title {
+  color: #c1ab65;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 2px;
+}
+.blog-area .section-title h2 {
+  color: #0d0d0d;
+  font-family: "Josefin Sans", sans-serif;
+}
+.blog-area .section-title p {
+  color: #555555;
+  font-family: "Playfair Display", serif;
+}
+.blog-area .blog-item {
+  background: #ffffff;
+  border: 1px solid #e8e6e0;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: 0.35s all ease;
+  overflow: hidden;
+}
+.blog-area .blog-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(193, 171, 101, 0.16);
+  border-color: rgba(193, 171, 101, 0.5);
+}
+.blog-area .blog-item .blog-bottom h3 a {
+  color: #0d0d0d;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.blog-area .blog-item .blog-bottom h3 a:hover {
+  color: #c1ab65;
+}
+.blog-area .blog-item .blog-bottom p {
+  color: #555555;
+  font-family: "Playfair Display", serif;
+  font-size: 14.5px;
+}
+.blog-area .banner-btn {
+  background-color: #c1ab65;
+  color: #080808;
+  border-color: #c1ab65;
 }
 
 /* Section 2: Studio Hallmark Badges */
@@ -6062,7 +6229,7 @@ footer .footer-item .footer-logo .footer-logo-img .footer-logo-main-img {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #ffffff;
+  color: #0d0d0d;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
@@ -6070,7 +6237,7 @@ footer .footer-item .footer-logo .footer-logo-img .footer-logo-main-img {
 .trust-hallmark-card p {
   font-family: "Playfair Display", serif;
   font-size: 13.5px;
-  color: #b0b3b8;
+  color: #555555;
   margin: 0 !important;
   line-height: 1.6;
 }

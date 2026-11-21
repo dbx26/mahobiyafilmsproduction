@@ -21,7 +21,6 @@
                                         <p>A landmark biographical period drama celebrating the transformative life, profound spiritual philosophy, and eternal message of universal equality.</p>
                                         {{-- <div class="banner-btn-group justify-content-start">
                                             <a class="banner-btn btn-gold" href="{{ route('films') }}">Explore Upcoming Slate</a>
-                                            <a class="banner-btn btn-outline" href="{{ route('news') }}">Read Announcement</a>
                                         </div> --}}
                                     </div>
                                 </div>
@@ -68,6 +67,9 @@
                                         <span class="sub-title">MAHOBIYA FILMS PRODUCTION</span>
                                         <h1>Stories Rooted in Heritage, Crafted for the World</h1>
                                         <p>From grand cultural epics to inspiring regional narratives, bridging Indian heritage with world-class cinematic excellence for audiences across generations.</p>
+                                        {{-- <div class="banner-btn-group justify-content-start">
+                                            <a class="banner-btn btn-gold" href="{{ route('films') }}">Explore Our Films</a>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +114,7 @@
     <!-- End Hero Banner -->
 
     <!-- Section 2 – Company Introduction -->
-    <section class="trust-area trust-area-two pt-100 pb-70">
+    <section class="trust-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
                 <span class="sub-title">ABOUT MAHOBIYA FILMS</span>
@@ -412,7 +414,7 @@
     <!-- End Watch Our Films -->
 
     <!-- Section 8 – Our Leadership -->
-    <section class="team-area team-area-two pt-100 pb-70">
+    <section class="team-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
                 <span class="sub-title">THE PEOPLE BEHIND THE VISION</span>
@@ -466,7 +468,7 @@
     <!-- End Our Leadership -->
 
     <!-- Section 9 – Latest News & Updates -->
-    <section class="blog-area blog-area-two pt-100 pb-70">
+    <section class="blog-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
                 <span class="sub-title">PRESS ROOM &amp; ANNOUNCEMENTS</span>
