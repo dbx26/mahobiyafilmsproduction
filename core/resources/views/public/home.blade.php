@@ -51,11 +51,11 @@
                         <i class='bx bxl-instagram'></i>
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="https://facebook.com" target="_blank" title="Facebook">
                         <i class='bx bxl-facebook'></i>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </div>
         <div class="lines">

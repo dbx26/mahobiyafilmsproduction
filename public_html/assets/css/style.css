@@ -177,25 +177,9 @@ button:focus {
   display: none;
 }
 
-.side-nav .modal-btn {
-  padding: 0;
-  transform: rotate(180deg);
-  position: relative;
-  top: -6px;
-}
-.side-nav .modal-btn:hover span:nth-child(2) {
-  width: 25px;
-}
-.side-nav .modal-btn:hover span:nth-child(3) {
-  width: 15px;
-}
-.side-nav .modal-btn span {
-  display: block;
-  width: 35px;
-  height: 3px;
-  background-color: #fff;
-  margin-bottom: 5px;
-  transition: 0.5s all ease;
+.side-nav .modal-btn,
+.modal-btn {
+  display: none !important;
 }
 
 .modal-body {
@@ -1228,74 +1212,123 @@ button:focus {
 /*-- Footer --*/
 footer {
   background-color: #020407;
+  border-top: 1px solid rgba(193, 171, 101, 0.18);
+  position: relative;
 }
 footer .footer-item {
   margin-bottom: 30px;
 }
 footer .footer-item h3 {
-  font-weight: 500;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
   font-size: 20px;
   color: #ffffff;
-  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 12px;
+}
+footer .footer-item h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 34px;
+  height: 2px;
+  background-color: #c1ab65;
 }
 footer .footer-item .footer-logo .footer-logo-img {
-  display: block;
-  margin-bottom: 25px;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 footer .footer-item .footer-logo p {
-  font-size: 14px;
-  color: #989797;
-  margin-bottom: 28px;
+  font-family: "Playfair Display", serif;
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: #a4a3a3;
+  margin-bottom: 24px;
 }
 footer .footer-item .footer-logo ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin: 0;
   padding: 0;
 }
 footer .footer-item .footer-logo ul li {
   list-style-type: none;
-  display: inline-block;
-  margin-right: 8px;
-}
-footer .footer-item .footer-logo ul li:last-child {
-  margin-right: 0;
+  margin: 0;
 }
 footer .footer-item .footer-logo ul li a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   text-align: center;
   color: #000000;
   font-size: 18px;
   background-color: #ffffff;
+  transition: 0.3s all ease;
+  border: 1px solid rgba(193, 171, 101, 0.3);
 }
 footer .footer-item .footer-logo ul li a:hover {
   color: #ffffff;
   background-color: #c1ab65;
+  border-color: #c1ab65;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(193, 171, 101, 0.35);
 }
 footer .footer-item .footer-logo ul li a i {
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  line-height: 1;
 }
 footer .footer-item .footer-instagram ul {
-  margin: 0;
+  margin: 0 -4px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
 footer .footer-item .footer-instagram ul li {
   list-style-type: none;
-  display: inline-block;
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
-  padding-right: 10px;
-  margin-bottom: 10px;
+  padding: 4px;
+  margin: 0;
 }
 footer .footer-item .footer-instagram ul li a {
   display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(193, 171, 101, 0.22);
+  background-color: #111111;
 }
 footer .footer-item .footer-instagram ul li a img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+footer .footer-item .footer-instagram ul li a:hover img {
+  transform: scale(1.12);
+}
+footer .footer-item .footer-instagram ul li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(193, 171, 101, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+footer .footer-item .footer-instagram ul li a:hover::after {
+  opacity: 1;
 }
 footer .footer-item .footer-link ul {
   margin: 0;
@@ -1304,18 +1337,33 @@ footer .footer-item .footer-link ul {
 footer .footer-item .footer-link ul li {
   list-style-type: none;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 footer .footer-item .footer-link ul li:last-child {
   margin-bottom: 0;
 }
 footer .footer-item .footer-link ul li a {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   color: #cdcccc;
+  font-family: "Playfair Display", serif;
   font-size: 15px;
+  transition: 0.3s all ease;
+}
+footer .footer-item .footer-link ul li a::before {
+  content: "›";
+  color: #c1ab65;
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.3s ease;
 }
 footer .footer-item .footer-link ul li a:hover {
   color: #c1ab65;
+  transform: translateX(4px);
+}
+footer .footer-item .footer-link ul li a:hover::before {
+  transform: scale(1.3);
 }
 footer .footer-item .footer-touch ul {
   margin: 0;
@@ -1323,49 +1371,86 @@ footer .footer-item .footer-touch ul {
 }
 footer .footer-item .footer-touch ul li {
   list-style-type: none;
-  display: block;
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 footer .footer-item .footer-touch ul li:last-child {
+  padding-bottom: 0;
   margin-bottom: 0;
+  border-bottom: none;
 }
-footer .footer-item .footer-touch ul li i {
-  position: absolute;
-  top: 0;
-  left: 0;
+footer .footer-item .footer-touch ul li .touch-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background-color: rgba(193, 171, 101, 0.1);
+  border: 1px solid rgba(193, 171, 101, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c1ab65;
+  font-size: 19px;
+  margin-top: 2px;
+  transition: 0.3s all ease;
+}
+footer .footer-item .footer-touch ul li:hover .touch-icon {
+  background-color: #c1ab65;
+  color: #080808;
+  transform: scale(1.05);
+}
+footer .footer-item .footer-touch ul li .touch-details {
+  flex: 1;
+}
+footer .footer-item .footer-touch ul li .touch-details h4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
 }
-footer .footer-item .footer-touch ul li h4 {
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 16px;
-  margin-bottom: 2px;
-}
-footer .footer-item .footer-touch ul li a {
+footer .footer-item .footer-touch ul li .touch-details a,
+footer .footer-item .footer-touch ul li .touch-details span {
   display: block;
+  font-family: "Playfair Display", serif;
   color: #cdcccc;
-  font-size: 15px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  transition: 0.3s all ease;
 }
-footer .footer-item .footer-touch ul li a:hover {
+footer .footer-item .footer-touch ul li .touch-details a + a {
+  margin-top: 3px;
+}
+footer .footer-item .footer-touch ul li .touch-details a:hover {
   color: #c1ab65;
 }
 
 /*-- End Footer --*/
 /*-- Copyright --*/
 .copyright-area {
-  text-align: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  background-color: #06080b;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  background-color: #040608;
+  border-top: 1px solid rgba(193, 171, 101, 0.15);
 }
-.copyright-area .copyright-item p {
+.copyright-area p {
   margin-bottom: 0;
-  font-size: 15px;
-  color: #ffffff;
-  font-weight: 500;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 13.5px;
+  color: #9c9b9b;
+  letter-spacing: 0.35px;
+}
+.copyright-area .bandhu-credit {
+  color: #c1ab65;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.3s all ease;
 }
 .copyright-area .copyright-item p a {
   display: inline-block;
@@ -2908,11 +2993,11 @@ footer .footer-item .footer-logo .footer-logo-img {
   margin-bottom: 20px;
 }
 footer .footer-item .footer-logo .footer-logo-img .footer-logo-main-img {
-  height: 96px;
-  max-height: 96px;
+  height: 180px;
+  max-height: 180px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.65));
 }
 
 /*----- Leadership Photo Aspect Ratio -----*/

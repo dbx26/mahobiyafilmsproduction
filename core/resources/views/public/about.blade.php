@@ -158,11 +158,11 @@
                         <div class="team-top">
                             <img src="{{ asset('images/prakash_mahobiya.jpg') }}" alt="Prakash Mahobiya">
                             <ul>
-                                <li>
+                                {{-- <li>
                                     <a href="#" target="_blank">
                                         <i class='bx bxl-facebook'></i>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li>
                                     <a href="#" target="_blank">
                                         <i class='bx bxl-twitter'></i>
@@ -191,11 +191,11 @@
                         <div class="team-top">
                             <img src="{{ asset('images/sanjay_bundela.jpg') }}" alt="Sanjay Bundela">
                             <ul>
-                                <li>
+                                {{-- <li>
                                     <a href="#" target="_blank">
                                         <i class='bx bxl-facebook'></i>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li>
                                     <a href="#" target="_blank">
                                         <i class='bx bxl-twitter'></i>

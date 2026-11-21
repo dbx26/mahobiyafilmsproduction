@@ -94,11 +94,7 @@
                                 <a href="{{ route('contact') }}" class="header-btn d-none d-lg-inline-block">
                                     Get In Touch
                                 </a>
-                                <button type="button" class="btn modal-btn" data-bs-toggle="modal" data-bs-target="#myModalRight" title="Quick Info">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
+                                {{-- Drawer button removed as requested --}}
                             </div>
                         </div>
                     </nav>
@@ -107,7 +103,7 @@
         </div>
         <!-- End Navbar Area -->
 
-        <!-- Sidebar Modal -->
+        {{-- <!-- Sidebar Modal (Drawer removed as requested) -->
         <div id="myModalRight" class="modal fade modal-right" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -139,18 +135,13 @@
                                         <i class='bx bxl-instagram'></i>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="https://facebook.com" target="_blank" title="Facebook">
-                                        <i class='bx bxl-facebook'></i>
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Sidebar Modal -->
+        <!-- End Sidebar Modal --> --}}
 
 @yield('content')
 
@@ -158,7 +149,8 @@
         <footer class="pt-100 pb-70">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-lg-3">
+                    <!-- Column 1: Studio Branding & Mission -->
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                         <div class="footer-item">
                             <div class="footer-logo">
                                 <a class="footer-logo-img" href="{{ route('home') }}">
@@ -167,65 +159,28 @@
                                 <p>Mahobiya Films Production Private Limited — Motion picture, television, and OTT film studio based in Bhilai, Chhattisgarh. Stories rooted in heritage, crafted for the world.</p>
                                 <ul>
                                     <li>
-                                        <a href="https://youtube.com/@mseries-bhilai" target="_blank" title="YouTube">
+                                        <a href="https://youtube.com/@mseries-bhilai" target="_blank" rel="noopener" title="M Series – Bhilai YouTube" aria-label="YouTube">
                                             <i class='bx bxl-youtube'></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.instagram.com/official_mahobiya_film" target="_blank" title="Instagram">
+                                        <a href="https://www.instagram.com/official_mahobiya_film" target="_blank" rel="noopener" title="Official Mahobiya Films Instagram" aria-label="Instagram">
                                             <i class='bx bxl-instagram'></i>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="https://facebook.com" target="_blank" title="Facebook">
+                                    {{-- <li>
+                                        <a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
                                             <i class='bx bxl-facebook'></i>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="footer-item">
-                            <div class="footer-instagram">
-                                <h3>Instagram</h3>
-                                <ul>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <img src="{{ asset('assets/') }}/img/home-one/instagram1.jpg" alt="Instagram">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <img src="{{ asset('assets/') }}/img/home-one/instagram2.jpg" alt="Instagram">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <img src="{{ asset('assets/') }}/img/home-one/instagram3.jpg" alt="Instagram">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <img src="{{ asset('assets/') }}/img/home-one/instagram4.jpg" alt="Instagram">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <img src="{{ asset('assets/') }}/img/home-one/instagram5.jpg" alt="Instagram">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <img src="{{ asset('assets/') }}/img/home-one/instagram6.jpg" alt="Instagram">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="footer-item">
+
+                    <!-- Column 2: Quick Links -->
+                    <div class="col-lg-3 col-md-5 mb-4 mb-lg-0">
+                        <div class="footer-item ps-xl-3">
                             <div class="footer-link">
                                 <h3>Quick Links</h3>
                                 <ul>
@@ -254,25 +209,49 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-3">
+
+                    <!-- Column 3: Studio Headquarters (Uniform with Contact Us Page) -->
+                    <div class="col-lg-5 col-md-7 mb-4 mb-lg-0">
                         <div class="footer-item">
                             <div class="footer-touch">
-                                <h3>Get In Touch</h3>
+                                <h3>Studio Headquarters</h3>
                                 <ul>
                                     <li>
-                                        <i class='bx bxs-phone-call'></i>
-                                        <h4>Phone:</h4>
-                                        <a href="tel:+919109141966">+91 91091 41966</a>
+                                        <div class="touch-icon">
+                                            <i class='bx bx-current-location'></i>
+                                        </div>
+                                        <div class="touch-details">
+                                            <h4>Studio Office:</h4>
+                                            <span>Koushal Tower, Kohka Khurd Main Road (Kurud Road), Kohka, Bhilai, Durg, Chhattisgarh – 490023, India.</span>
+                                        </div>
                                     </li>
                                     <li>
-                                        <i class='bx bx-message-square-detail'></i>
-                                        <h4>Email:</h4>
-                                        <a href="mailto:mahobiyafilmsproduction@gmail.com">mahobiyafilmsproduction@gmail.com</a>
+                                        <div class="touch-icon">
+                                            <i class='bx bx-phone-call'></i>
+                                        </div>
+                                        <div class="touch-details">
+                                            <h4>Production Lines:</h4>
+                                            <a href="tel:+919109141966">+91 91091 41966</a>
+                                            <a href="tel:+918966002047">+91 89660 02047</a>
+                                        </div>
                                     </li>
                                     <li>
-                                        <i class='bx bxs-location-plus'></i>
-                                        <h4>Address:</h4>
-                                        <span>Koushal Tower, Kohka Kurud Main Rd, Bhilai, CG</span>
+                                        <div class="touch-icon">
+                                            <i class='bx bx-envelope'></i>
+                                        </div>
+                                        <div class="touch-details">
+                                            <h4>Official Email:</h4>
+                                            <a href="mailto:mahobiyafilmsproduction@gmail.com">mahobiyafilmsproduction@gmail.com</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="touch-icon">
+                                            <i class='bx bx-time-five'></i>
+                                        </div>
+                                        <div class="touch-details">
+                                            <h4>Operational Hours:</h4>
+                                            <span>Monday – Saturday: 10:00 AM – 7:00 PM IST</span>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -286,8 +265,13 @@
         <!-- Copyright -->
         <div class="copyright-area">
             <div class="container">
-                <div class="copyright-item">
-                    <p>&copy; {{ date('Y') }} Mahobiya Films Production Private Limited. All Rights Reserved.</p>
+                <div class="row align-items-center">
+                    <div class="col-md-7 text-center text-md-start mb-2 mb-md-0">
+                        <p class="copyright-text">&copy; {{ date('Y') }} Mahobiya Films Production Private Limited. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-5 text-center text-md-end">
+                        <p class="copyright-credit">Designed, Developed &amp; Maintained by <span class="bandhu-credit">Bandhu</span></p>
+                    </div>
                 </div>
             </div>
         </div>

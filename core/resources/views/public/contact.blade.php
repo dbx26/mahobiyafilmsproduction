@@ -172,9 +172,9 @@
                                         <a href="https://www.instagram.com/official_mahobiya_film" target="_blank" title="Official Mahobiya Films Instagram">
                                             <i class='bx bxl-instagram'></i>
                                         </a>
-                                        <a href="https://facebook.com" target="_blank" title="Facebook">
+                                        {{-- <a href="https://facebook.com" target="_blank" title="Facebook">
                                             <i class='bx bxl-facebook'></i>
-                                        </a>
+                                        </a> --}}
                                     </div>
                                 </div>
                             </div>
