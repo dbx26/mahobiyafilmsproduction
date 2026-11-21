@@ -915,15 +915,65 @@ html, body {
   1. Tablet Screens (768px to 991px)
 -------------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* Our Films */
+  /* Page Title / Banner */
+  .page-title-area {
+    padding-top: 140px;
+    padding-bottom: 70px;
+  }
+  .page-title-item h2 {
+    font-size: 32px;
+  }
+
+  /* Section Titles */
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  /* 1. About Us (/about) */
+  .about-vision-section {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+  .about-vision-section .vision-media-frame img {
+    height: 380px;
+  }
+  .about-vision-narrative {
+    margin-top: 25px;
+  }
+  .service-area-two .service-item {
+    padding: 30px 20px 30px 75px;
+    height: calc(100% - 30px);
+  }
+  .product-area-two .product-item img {
+    height: 220px;
+  }
+  .about-featured-work {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .about-featured-work .work-details-img {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* 2. Our Films (/films) */
+  .work-area-two {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+  .film-card-horizontal {
+    margin-bottom: 30px;
+  }
   .film-card-horizontal .film-card-poster {
-    min-height: 360px;
+    min-height: 380px;
   }
   .film-card-horizontal .film-card-body {
-    padding: 30px 24px;
+    padding: 28px 24px;
   }
   .film-card-horizontal .film-card-body h3 {
-    font-size: 24px;
+    font-size: 26px;
+  }
+  .film-card-horizontal .film-synopsis {
+    font-size: 15px;
   }
 
   /* Film Detail */
@@ -939,42 +989,100 @@ html, body {
     gap: 14px;
   }
 
-  /* Videos */
+  /* 3. Videos (/videos) */
+  .week-area-two {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
   .movie-showcase-panel {
     padding: 26px 22px;
+  }
+  .showcase-title {
+    font-size: 22px;
   }
   .reels-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
+  .channel-callout-banner {
+    padding: 32px 26px;
+  }
 
-  /* Our Team */
-  .leadership-photo-wrap {
-    width: 220px;
-    height: 220px;
+  /* 4. Our Team (/team) */
+  .team-leadership-section {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+  .team-leadership-section .row > [class*="col-"],
+  .team-area-three .row > [class*="col-"] {
+    display: flex;
   }
   .team-leadership-card {
-    padding: 32px 22px;
+    padding: 30px 18px;
+    width: 100%;
+  }
+  .leadership-photo-wrap {
+    width: 210px;
+    height: 210px;
+    margin-bottom: 20px;
   }
   .leadership-name {
     font-size: 22px;
   }
+  .team-divisions-section {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+  .team-divisions-section .row > [class*="col-"] {
+    display: flex;
+  }
   .division-card {
-    padding: 26px 20px;
+    padding: 24px 18px;
+    height: 100%;
+    width: 100%;
+  }
+  .team-footprint-section {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+  .team-footprint-section .row > [class*="col-"] {
+    display: flex;
+  }
+  .studio-fact-card {
+    padding: 24px 18px;
+    height: 100%;
+    width: 100%;
   }
 
-  /* News & Updates */
+  /* 5. News & Updates (/news) */
+  .featured-news-card .featured-news-poster-wrap {
+    min-height: 380px;
+  }
   .featured-news-card .featured-news-content {
     padding: 28px 24px;
   }
   .featured-news-title {
     font-size: 22px;
   }
+  .blog-area-two .row > [class*="col-"] {
+    display: flex;
+  }
+  .blog-area-two .blog-item {
+    width: 100%;
+  }
 
-  /* Contact Us */
+  /* 6. Contact Us (/contact) */
+  .contact-area {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
   .contact-form-card,
   .contact-info-card {
-    padding: 32px 24px;
+    padding: 30px 24px;
+    margin-bottom: 30px;
+  }
+  .contact-map-wrapper iframe {
+    height: 320px;
   }
 
   /* Footer */
@@ -990,7 +1098,7 @@ html, body {
     margin-bottom: 18px;
   }
   footer .footer-item .footer-logo .footer-logo-img .footer-logo-main-img {
-    height: 140px;
+    height: 130px;
   }
 }
 
@@ -999,38 +1107,177 @@ html, body {
 -------------------------------------------------*/
 @media only screen and (max-width: 767px) {
   /* General Typography & Spacing */
-  .section-title {
-    margin-bottom: 30px;
-  }
-  .section-title h2 {
-    font-size: 24px !important;
-  }
-  .section-title p {
-    font-size: 14px !important;
-    margin-bottom: 25px !important;
+  .page-title-area {
+    padding-top: 130px;
+    padding-bottom: 50px;
   }
   .page-title-item h2 {
     font-size: 26px !important;
   }
+  .page-title-item p {
+    font-size: 14px;
+  }
+  .section-title {
+    margin-bottom: 28px;
+  }
+  .section-title span.sub-title {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+  }
+  .section-title h2 {
+    font-size: 24px !important;
+    line-height: 1.35;
+  }
+  .section-title p {
+    font-size: 14px !important;
+    margin-bottom: 20px !important;
+    line-height: 1.65;
+  }
 
-  /* 1. Our Films (/films) */
+  /* 1. About Us (/about) */
+  .about-vision-section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+  .about-vision-section .vision-media-frame img {
+    height: 280px;
+  }
+  .about-vision-narrative {
+    margin-top: 24px;
+  }
+  .about-vision-section .section-title h2 {
+    font-size: 26px !important;
+  }
+  .about-vision-section .narrative-body p.lead-text {
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+  .about-vision-section .narrative-body p {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+  .about-pillars-list {
+    margin-top: 22px;
+    gap: 16px;
+  }
+  .pillar-item {
+    gap: 14px;
+  }
+  .service-area-two {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .service-area-two .service-item {
+    padding: 24px 18px 24px 65px;
+    height: auto;
+    margin-bottom: 24px;
+  }
+  .service-area-two .service-item i {
+    left: 18px;
+    top: 24px;
+    font-size: 30px;
+  }
+  .service-area-two .service-item .service-inner h3 {
+    font-size: 19px;
+  }
+  .service-area-two .service-item .service-inner p {
+    font-size: 14px;
+  }
+  .product-area-two {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .product-area-two .product-item {
+    height: auto;
+    margin-bottom: 24px;
+    padding-bottom: 22px;
+  }
+  .product-area-two .product-item img {
+    height: 200px;
+    margin-bottom: 18px;
+  }
+  .product-area-two .product-item h3 {
+    font-size: 19px;
+  }
+  .product-area-two .product-item p {
+    font-size: 14px;
+  }
+  .about-featured-work {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .about-featured-work .section-title h2 {
+    font-size: 24px !important;
+  }
+  .about-featured-work .work-details-img a {
+    width: 58px;
+    height: 58px;
+    font-size: 28px;
+  }
+  .about-featured-work .work-details-content .work-meta-list {
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .about-featured-work .work-details-content .work-meta-list li {
+    font-size: 12px;
+    letter-spacing: 0.8px;
+  }
+  .about-featured-work .work-details-content p {
+    font-size: 14.5px;
+    line-height: 1.75;
+  }
+
+  /* 2. Our Films (/films) */
+  .work-area-two {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
   .film-card-horizontal {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
+    border-radius: 8px;
   }
   .film-card-horizontal .film-card-poster {
     min-height: auto;
-    height: 320px;
+    height: auto;
+    padding: 22px 15px 14px;
+    background-color: #0b0b0b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .film-card-horizontal .film-card-poster img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7);
+  }
+  .film-card-horizontal .film-card-poster .film-badge {
+    top: 24px;
+    left: calc(50% - 110px);
   }
   .film-card-horizontal .film-card-body {
-    padding: 24px 18px;
+    padding: 22px 18px;
   }
   .film-card-horizontal .film-card-body h3 {
     font-size: 22px;
     margin-bottom: 8px;
   }
+  .film-card-horizontal .upcoming-project-badge {
+    font-size: 10.5px;
+    padding: 4px 10px;
+  }
+  .film-card-horizontal .film-tagline-quote {
+    font-size: 15.5px;
+    margin-bottom: 12px;
+  }
   .film-card-horizontal .film-synopsis {
-    font-size: 14.5px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
   }
   .film-card-horizontal .film-action {
     gap: 10px;
@@ -1041,7 +1288,7 @@ html, body {
     font-size: 14px;
   }
 
-  /* 1.1 Film Detail Page */
+  /* Film Detail Page */
   .work-details-area {
     padding-top: 50px;
     padding-bottom: 40px;
@@ -1107,21 +1354,26 @@ html, body {
     padding: 5px 12px;
   }
 
-  /* 2. Videos (/videos) */
+  /* 3. Videos (/videos) */
+  .week-area-two {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
   .movie-showcase-panel {
     padding: 20px 16px;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
+    border-radius: 8px;
   }
   .showcase-header {
-    margin-bottom: 20px;
-    padding-bottom: 18px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
   }
   .showcase-title {
-    font-size: 18px;
+    font-size: 19px;
   }
   .showcase-poster {
-    width: 48px;
-    height: 68px;
+    width: 52px;
+    height: 74px;
   }
   .showcase-video-card {
     margin-bottom: 4px;
@@ -1140,8 +1392,9 @@ html, body {
     font-size: 11px;
   }
   .channel-callout-banner {
-    padding: 28px 20px;
-    margin-top: 30px;
+    padding: 26px 20px;
+    margin-top: 25px;
+    border-radius: 8px;
   }
   .channel-callout-banner h3 {
     font-size: 22px;
@@ -1152,18 +1405,23 @@ html, body {
   .reels-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin-top: 25px;
-    margin-bottom: 35px;
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 
-  /* 3. Our Team (/team) */
+  /* 4. Our Team (/team) */
+  .team-leadership-section {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
   .team-leadership-card {
-    padding: 28px 18px;
+    padding: 26px 18px;
+    margin-bottom: 24px;
   }
   .leadership-photo-wrap {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
+    width: 190px;
+    height: 190px;
+    margin-bottom: 18px;
   }
   .leadership-name {
     font-size: 22px;
@@ -1171,48 +1429,83 @@ html, body {
   .leadership-title {
     font-size: 13px;
   }
+  .leadership-pills {
+    gap: 5px;
+  }
+  .leadership-pill {
+    font-size: 10.5px;
+    padding: 3px 9px;
+  }
   .leadership-bio {
-    font-size: 14.5px;
+    font-size: 14px;
     margin-bottom: 16px;
   }
   .leadership-insta-btn {
     font-size: 13px;
     padding: 8px 18px;
   }
+  .team-divisions-section {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
   .division-card {
-    padding: 22px 18px;
+    padding: 20px 16px;
+    margin-bottom: 18px;
   }
   .division-card h3 {
     font-size: 18px;
   }
+  .team-footprint-section {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
   .studio-fact-card {
-    padding: 22px 18px;
+    padding: 20px 16px;
+    margin-bottom: 18px;
+    text-align: center;
   }
 
-  /* 4. News & Updates (/news) */
+  /* 5. News & Updates (/news) */
   .featured-news-card {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
+    border-radius: 8px;
   }
   .featured-news-card .featured-news-img {
     min-height: auto;
     aspect-ratio: 16 / 9;
   }
   .featured-news-poster-wrap {
-    min-height: 360px;
+    min-height: auto;
+    height: auto;
+    padding: 20px 15px 12px;
+    background-color: #080808;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .featured-news-poster-wrap img.featured-poster-img {
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7);
   }
   .featured-news-card .featured-news-content {
-    padding: 24px 18px;
+    padding: 22px 18px;
   }
   .featured-news-title {
     font-size: 20px;
-    line-height: 1.4;
+    line-height: 1.35;
   }
   .featured-news-excerpt {
     font-size: 14px;
-    margin-bottom: 18px;
+    line-height: 1.7;
+    margin-bottom: 16px;
   }
   .blog-area-two .blog-item {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
   .blog-area-two .blog-item .blog-bottom {
     padding: 18px 16px 20px;
@@ -1226,7 +1519,7 @@ html, body {
     font-size: 13.5px;
   }
 
-  /* 5. Contact Us (/contact) */
+  /* 6. Contact Us (/contact) */
   .contact-area {
     padding-top: 50px;
     padding-bottom: 35px;
@@ -1234,15 +1527,17 @@ html, body {
   .contact-form-card,
   .contact-info-card {
     padding: 26px 18px;
+    margin-bottom: 24px;
+    border-radius: 8px;
   }
   .contact-form-card h3,
   .contact-info-card h3 {
     font-size: 22px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
   .contact-form-card p.form-subtitle {
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .contact-form-card .form-group {
     margin-bottom: 16px;
@@ -1253,15 +1548,15 @@ html, body {
     padding: 8px 14px;
   }
   .contact-info-item {
-    gap: 16px;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
+    gap: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
   }
   .contact-info-item .info-icon {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    font-size: 20px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 19px;
   }
   .contact-info-item .info-details h4 {
     font-size: 15px;
@@ -1270,9 +1565,10 @@ html, body {
   .contact-info-item .info-details a {
     font-size: 13.5px;
     line-height: 1.6;
+    word-break: break-word;
   }
   .contact-map-wrapper {
-    margin-top: 35px;
+    margin-top: 25px;
   }
   .contact-map-wrapper iframe {
     height: 280px;
@@ -1284,14 +1580,14 @@ html, body {
     padding-bottom: 30px;
   }
   footer .footer-item {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
   footer .footer-item h3 {
     font-size: 18px;
     margin-bottom: 16px;
   }
   footer .footer-item .footer-logo .footer-logo-img .footer-logo-main-img {
-    height: 120px;
+    height: 110px;
   }
   footer .footer-item .footer-logo p {
     font-size: 14px;
@@ -1324,52 +1620,7 @@ html, body {
     padding: 0 10px;
   }
 
-  /* About Us Vision Section */
-  .about-vision-section {
-    padding-top: 60px !important;
-    padding-bottom: 60px !important;
-  }
-  .about-vision-section .vision-media-frame img {
-    height: 320px;
-  }
-  .about-vision-section .section-title h2 {
-    font-size: 28px;
-  }
-  .about-vision-section .narrative-body p.lead-text {
-    font-size: 16px;
-    line-height: 1.7;
-  }
-  .about-vision-section .narrative-body p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-  .about-vision-section + .service-area-two .service-item {
-    padding: 25px 20px 25px 70px;
-  }
-  .about-vision-section + .service-area-two .service-item i {
-    left: 20px;
-    top: 25px;
-    font-size: 32px;
-  }
-
-  /* About Us Featured Production */
-  .about-featured-work .section-title h2 {
-    font-size: 26px !important;
-  }
-  .about-featured-work .work-details-img a {
-    width: 60px;
-    height: 60px;
-    font-size: 30px;
-  }
-  .about-featured-work .work-details-content .work-meta-list li {
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-  .about-featured-work .work-details-content p {
-    font-size: 15px;
-  }
-
-  /* Upcoming Film Spotlight */
+  /* Upcoming Film Spotlight (Home page) */
   .upcoming-film-poster-wrap {
     max-width: 250px;
     margin-bottom: 25px;
@@ -1389,19 +1640,102 @@ html, body {
   3. Small Mobile Screens (max-width: 480px)
 -------------------------------------------------*/
 @media only screen and (max-width: 480px) {
-  /* Our Films */
+  /* Typography */
+  .section-title h2 {
+    font-size: 22px !important;
+  }
+  .page-title-item h2 {
+    font-size: 24px !important;
+  }
+
+  /* 1. About Us (/about) */
+  .about-vision-section {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+  .about-vision-section .vision-media-frame img {
+    height: 230px;
+  }
+  .about-vision-section .section-title h2 {
+    font-size: 23px !important;
+  }
+  .about-vision-section .pillar-item {
+    gap: 12px;
+  }
+  .about-vision-section .pillar-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+  .about-vision-section .pillar-icon i {
+    font-size: 18px;
+  }
+  .service-area-two .service-item {
+    padding: 18px 14px 18px 54px;
+  }
+  .service-area-two .service-item i {
+    left: 14px;
+    top: 20px;
+    font-size: 24px;
+  }
+  .service-area-two .service-item .service-inner h3 {
+    font-size: 17px;
+  }
+  .product-area-two .product-item img {
+    height: 180px;
+  }
+  .product-area-two .product-item h3 {
+    font-size: 17px;
+    padding: 0 10px;
+  }
+  .product-area-two .product-item p {
+    font-size: 13px;
+    padding: 0 12px;
+  }
+  .about-featured-work .work-details-img a {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+  .about-featured-work .work-details-content .work-meta-list {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .about-featured-work .work-details-content .work-meta-list li span {
+    display: none;
+  }
+  .about-featured-work .work-details-content .work-meta-list li {
+    font-size: 11.5px;
+    margin: 2px 0;
+  }
+  .about-featured-work .banner-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* 2. Our Films (/films) */
+  .film-card-horizontal .film-card-poster img {
+    max-width: 220px;
+    max-height: 320px;
+  }
   .film-card-horizontal .film-action {
     flex-direction: column;
     align-items: stretch;
+    gap: 8px;
   }
   .film-card-btn,
   .film-trailer-btn {
     width: 100%;
     text-align: center;
     justify-content: center;
+    font-size: 13.5px;
+    padding: 10px 16px;
   }
   .film-card-horizontal .film-card-body h3 {
     font-size: 20px;
+  }
+  .film-card-horizontal .film-tagline-quote {
+    font-size: 14.5px;
   }
 
   /* Film Details Cast */
@@ -1426,40 +1760,66 @@ html, body {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  /* Videos */
-  .showcase-header {
+  /* 3. Videos (/videos) */
+  .showcase-header .d-flex {
     flex-direction: column;
     align-items: flex-start !important;
+    gap: 10px;
   }
   .showcase-detail-btn {
     width: 100%;
     text-align: center;
     justify-content: center;
+    font-size: 13px;
+    padding: 9px 14px;
   }
   .reels-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
+  .reel-title {
+    font-size: 11.5px;
+  }
   .channel-callout-banner .banner-btn {
     width: 100%;
     justify-content: center;
+    font-size: 13.5px;
   }
 
-  /* Our Team */
+  /* 4. Our Team (/team) */
   .leadership-photo-wrap {
-    width: 175px;
-    height: 175px;
+    width: 165px;
+    height: 165px;
   }
   .leadership-name {
     font-size: 20px;
   }
   .leadership-bio {
-    font-size: 13.5px;
+    font-size: 13px;
+  }
+  .leadership-insta-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 12.5px;
   }
 
-  /* News & Updates */
+  /* 5. News & Updates (/news) */
+  .featured-news-poster-wrap img.featured-poster-img {
+    max-width: 210px;
+    max-height: 310px;
+  }
   .featured-news-title {
     font-size: 18px;
+  }
+  .featured-news-content .d-flex {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .featured-news-content .showcase-detail-btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
   }
   .news-meta-bar {
     gap: 6px;
@@ -1471,72 +1831,148 @@ html, body {
   .news-date {
     font-size: 11px;
   }
+  .blog-area-two .blog-item .blog-bottom h3 {
+    font-size: 16.5px;
+  }
 
-  /* Contact Us */
+  /* 6. Contact Us (/contact) */
   .contact-submit-btn {
     width: 100%;
     justify-content: center;
+    font-size: 14px;
+    padding: 12px;
   }
   .contact-map-wrapper iframe {
-    height: 240px;
+    height: 220px;
   }
 
   /* Footer */
   footer .footer-item .footer-logo .footer-logo-img .footer-logo-main-img {
-    height: 100px;
+    height: 95px;
   }
   footer .footer-item .footer-instagram ul li {
     padding: 3px;
   }
   .copyright-area {
-    padding-bottom: 72px;
+    padding-bottom: 25px;
   }
   .copyright-area p {
-    font-size: 12px;
+    font-size: 11.5px;
   }
+}
 
-  /* About Us Vision Section */
-  .about-vision-section {
-    padding-top: 45px !important;
-    padding-bottom: 45px !important;
+/* ==========================================================================
+   Home Page Multi-Screen Responsiveness (Moovi Architecture)
+   ========================================================================== */
+@media only screen and (max-width: 991px) {
+  .home-cta-box {
+    padding: 40px 25px;
   }
-  .about-vision-section .vision-media-frame img {
-    height: 240px;
+  .home-cta-box h2 {
+    font-size: 30px;
   }
-  .about-vision-section .section-title h2 {
-    font-size: 24px;
+  .journey-card {
+    padding: 28px 20px;
   }
-  .about-vision-section .vision-floating-badge {
-    bottom: 12px;
-    left: 12px;
-    padding: 6px 12px;
+  .home-blog-thumb {
+    height: 200px;
   }
-  .about-vision-section .pillar-item {
-    gap: 12px;
+  .film-spotlight-body {
+    padding: 24px 20px;
   }
-  .about-vision-section .pillar-icon {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
+  .spotlight-title {
+    font-size: 22px;
   }
-  .about-vision-section .pillar-icon i {
-    font-size: 18px;
+  .spotlight-actions {
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
   }
+}
 
-  /* About Us Featured Production */
-  .about-featured-work .work-details-img a {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
+@media only screen and (max-width: 767px) {
+  .trust-hallmark-card {
+    padding: 20px 14px;
   }
-  .about-featured-work .work-details-content .work-meta-list li {
-    font-size: 11px;
+  .trust-hallmark-card i {
+    font-size: 28px;
+    margin-bottom: 8px;
   }
-  .about-featured-work .work-details-content .work-meta-list li span {
-    margin: 0 4px;
+  .trust-hallmark-card h4 {
+    font-size: 14.5px;
   }
-  .about-featured-work .banner-btn {
+  .trust-hallmark-card p {
+    font-size: 12.5px;
+  }
+  .upcoming-film-actions {
+    justify-content: center;
+  }
+  .upcoming-film-actions .banner-btn {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 8px;
+    text-align: center;
+    justify-content: center;
+  }
+  .film-spotlight-body {
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .spotlight-title {
+    font-size: 20px;
+  }
+  .spotlight-desc {
+    font-size: 14px;
+  }
+  .spotlight-actions {
     width: 100%;
     justify-content: center;
+  }
+  .spotlight-actions .banner-btn {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 8px;
+    justify-content: center;
+  }
+  .journey-card {
+    padding: 26px 18px;
+  }
+  .journey-card h3 {
+    font-size: 19px;
+  }
+  .journey-card p {
+    font-size: 14.5px;
+  }
+  .home-cta-box {
+    padding: 32px 18px;
+  }
+  .home-cta-box h2 {
+    font-size: 23px;
+    line-height: 1.35;
+  }
+  .home-cta-box p {
+    font-size: 14.5px;
+    margin-bottom: 20px;
+  }
+  .home-cta-actions .banner-btn {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 8px;
+    justify-content: center;
+  }
+  .home-blog-thumb {
+    height: 185px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .trust-hallmark-row .col-6 {
+    width: 100%;
+  }
+  .home-video-meta h4 {
+    font-size: 15.5px;
+  }
+  .home-video-card .week-item {
+    aspect-ratio: 16 / 9;
   }
 }/*# sourceMappingURL=responsive.css.map */
